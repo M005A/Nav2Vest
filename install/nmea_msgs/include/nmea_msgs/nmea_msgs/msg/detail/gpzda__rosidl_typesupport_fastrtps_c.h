@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpzda__rosidl_typesupport_fastrtps_c.h

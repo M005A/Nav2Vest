@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from robot_localization/srv/ToLLArray.srv
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/GeoPoint.idl"
+#include "geometry_msgs/msg/Point.idl"
+
+module robot_localization {
+  module srv {
+    struct ToLLArray_Request {
+      sequence<geometry_msgs::msg::Point> map_points;
+    };
+    struct ToLLArray_Response {
+      sequence<geographic_msgs::msg::GeoPoint> ll_points;
+    };
+  };
+};

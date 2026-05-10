@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_generator_rs/nmea_msgs/rust/build.rs

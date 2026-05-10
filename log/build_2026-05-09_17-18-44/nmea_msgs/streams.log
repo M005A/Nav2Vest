@@ -1,0 +1,290 @@
+[0.026s] Invoking command in '/home/macho/navivest_ws/build/nmea_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/macho/navivest_ws/build/nmea_msgs -- -j16 -l16
+[0.220s] [  1%] Built target nmea_msgs__rs
+[0.220s] [  1%] Built target nmea_msgs__rosidl_generator_type_description
+[0.220s] [  1%] Built target ament_cmake_python_symlink_nmea_msgs
+[0.220s] [  1%] Built target nmea_msgs__cpp
+[0.220s] [ 27%] Built target nmea_msgs__rosidl_generator_c
+[0.220s] [ 47%] Built target nmea_msgs__rosidl_typesupport_c
+[0.220s] [ 47%] Built target nmea_msgs__rosidl_typesupport_fastrtps_cpp
+[0.221s] [ 59%] Built target nmea_msgs__rosidl_typesupport_introspection_cpp
+[0.221s] [ 67%] Built target nmea_msgs__rosidl_typesupport_cpp
+[0.221s] [ 76%] Built target nmea_msgs__rosidl_typesupport_introspection_c
+[0.221s] [ 85%] Built target nmea_msgs__rosidl_typesupport_fastrtps_c
+[0.221s] [ 85%] Built target nmea_msgs
+[0.221s] [ 86%] Built target nmea_msgs__py
+[0.221s] [ 95%] Built target nmea_msgs__rosidl_generator_py
+[0.238s] [100%] Built target nmea_msgs_s__rosidl_typesupport_fastrtps_c
+[0.239s] [100%] Built target nmea_msgs_s__rosidl_typesupport_c
+[0.239s] [100%] Built target nmea_msgs_s__rosidl_typesupport_introspection_c
+[0.259s] running egg_info
+[0.271s] writing nmea_msgs.egg-info/PKG-INFO
+[0.271s] writing dependency_links to nmea_msgs.egg-info/dependency_links.txt
+[0.271s] writing top-level names to nmea_msgs.egg-info/top_level.txt
+[0.306s] reading manifest file 'nmea_msgs.egg-info/SOURCES.txt'
+[0.307s] writing manifest file 'nmea_msgs.egg-info/SOURCES.txt'
+[0.333s] [100%] Built target ament_cmake_python_build_nmea_msgs_egg
+[0.347s] Invoked command in '/home/macho/navivest_ws/build/nmea_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/macho/navivest_ws/build/nmea_msgs -- -j16 -l16
+[0.347s] Invoking command in '/home/macho/navivest_ws/build/nmea_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/macho/navivest_ws/build/nmea_msgs
+[0.357s] -- Install configuration: ""
+[0.357s] -- Execute custom install script
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/ament_index/resource_index/rosidl_interfaces/nmea_msgs
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Sentence.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgga.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgsa.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgst.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgsv.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/GpgsvSatellite.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gprmc.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpvtg.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpzda.json
+[0.358s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gphdt.json
+[0.359s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__functions.h
+[0.359s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__struct.h
+[0.359s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__type_support.h
+[0.359s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__functions.h
+[0.359s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__struct.h
+[0.359s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__type_support.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__functions.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__struct.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__type_support.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__functions.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__struct.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__type_support.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__functions.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__struct.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__type_support.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__functions.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__struct.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__type_support.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__functions.h
+[0.360s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__struct.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__type_support.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__functions.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__struct.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__type_support.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__functions.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__struct.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__type_support.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__functions.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__struct.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__type_support.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgga.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgsa.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgst.h
+[0.361s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgsv.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgsv_satellite.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gphdt.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gprmc.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpvtg.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpzda.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/sentence.h
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/library_path.sh
+[0.362s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/library_path.dsv
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_c.h
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_c.h
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_c.h
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_c.h
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_c.h
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__rosidl_typesupport_fastrtps_c.h
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_c.h
+[0.363s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__rosidl_typesupport_fastrtps_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__rosidl_typesupport_fastrtps_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__rosidl_typesupport_introspection_c.h
+[0.364s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_c.h
+[0.365s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.365s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__builder.hpp
+[0.365s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__struct.hpp
+[0.365s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__traits.hpp
+[0.365s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__type_support.hpp
+[0.365s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__builder.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__struct.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__traits.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__type_support.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__builder.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__struct.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__traits.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__type_support.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__builder.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__struct.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__traits.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__type_support.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__builder.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__struct.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__traits.hpp
+[0.366s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__type_support.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__builder.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__struct.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__traits.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__type_support.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__builder.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__struct.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__traits.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__type_support.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__builder.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__struct.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__traits.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__type_support.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__builder.hpp
+[0.367s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__struct.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__traits.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__type_support.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__builder.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__struct.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__traits.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__type_support.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgga.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgsa.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgst.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgsv.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpgsv_satellite.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gphdt.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gprmc.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpvtg.hpp
+[0.368s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/gpzda.hpp
+[0.369s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.369s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/sentence.hpp
+[0.369s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_cpp.hpp
+[0.369s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_cpp.hpp
+[0.369s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_cpp.hpp
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.370s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gphdt__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpvtg__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/gpzda__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/include/nmea_msgs/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_cpp.hpp
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/pythonpath.sh
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/pythonpath.dsv
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs-2.1.0-py3.12.egg-info/PKG-INFO
+[0.371s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs-2.1.0-py3.12.egg-info/SOURCES.txt
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs-2.1.0-py3.12.egg-info/dependency_links.txt
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs-2.1.0-py3.12.egg-info/top_level.txt
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/__init__.py
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_c.c
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/__init__.py
+[0.372s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgga.py
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgga_s.c
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgsa.py
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgsa_s.c
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgst.py
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgst_s.c
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgsv.py
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgsv_s.c
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgsv_satellite.py
+[0.373s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpgsv_satellite_s.c
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gphdt.py
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gphdt_s.c
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gprmc.py
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gprmc_s.c
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpvtg.py
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpvtg_s.c
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpzda.py
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_gpzda_s.c
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_sentence.py
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg/_sentence_s.c
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.so
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.374s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.so
+[0.375s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.375s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.so
+[0.375s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.so
+[0.375s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/ament_index/resource_index/rust_packages/nmea_msgs
+[0.375s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/rust/Cargo.toml
+[0.375s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/rust/build.rs
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/rust/src/lib.rs
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/rust/src/msg.rs
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/rust/src/msg/rmw.rs
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Sentence.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgga.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgsa.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgst.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgsv.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/GpgsvSatellite.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gprmc.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpvtg.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpzda.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gphdt.idl
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Sentence.msg
+[0.376s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgga.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgsa.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgst.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpgsv.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/GpgsvSatellite.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gprmc.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpvtg.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gpzda.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/msg/Gphdt.msg
+[0.377s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/ament_index/resource_index/package_run_dependencies/nmea_msgs
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/ament_index/resource_index/parent_prefix_path/nmea_msgs
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/ament_prefix_path.sh
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/ament_prefix_path.dsv
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/path.sh
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/environment/path.dsv
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/local_setup.bash
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/local_setup.sh
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/local_setup.zsh
+[0.378s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/local_setup.dsv
+[0.378s] -- Symlinking: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/package.dsv
+[0.387s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/ament_index/resource_index/packages/nmea_msgs
+[0.387s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake-extras.cmake
+[0.387s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.387s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.387s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.388s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.388s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.388s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.388s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgsConfig.cmake
+[0.388s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgsConfig-version.cmake
+[0.389s] -- Up-to-date symlink: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/package.xml
+[0.389s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_generator_c.so
+[0.389s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_c.so
+[0.390s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_c.so
+[0.390s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_c.so
+[0.391s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.391s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_cpp.so
+[0.391s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_cpp.so
+[0.416s] Listing '/home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs'...
+[0.416s] Listing '/home/macho/navivest_ws/install/nmea_msgs/lib/python3.12/site-packages/nmea_msgs/msg'...
+[0.420s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/lib/libnmea_msgs__rosidl_generator_py.so
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_generator_cExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_generator_cppExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport.cmake
+[0.421s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.422s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_generator_pyExport.cmake
+[0.422s] -- Up-to-date: /home/macho/navivest_ws/install/nmea_msgs/share/nmea_msgs/cmake/export_nmea_msgs__rosidl_generator_pyExport-noconfig.cmake
+[0.424s] Invoked command in '/home/macho/navivest_ws/build/nmea_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/macho/navivest_ws/build/nmea_msgs

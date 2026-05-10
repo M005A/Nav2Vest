@@ -1,0 +1,864 @@
+[0.013s] Invoking command in '/home/macho/navivest_ws/build/zed_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/macho/navivest_ws/src/zed-ros2-interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/macho/navivest_ws/install/zed_msgs
+[0.058s] -- The C compiler identification is GNU 13.3.0
+[0.097s] -- The CXX compiler identification is GNU 13.3.0
+[0.112s] -- Detecting C compiler ABI info
+[0.188s] -- Detecting C compiler ABI info - done
+[0.196s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.196s] -- Detecting C compile features
+[0.196s] -- Detecting C compile features - done
+[0.204s] -- Detecting CXX compiler ABI info
+[0.281s] -- Detecting CXX compiler ABI info - done
+[0.286s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.286s] -- Detecting CXX compile features
+[0.286s] -- Detecting CXX compile features - done
+[0.288s] -- Found ament_cmake_auto: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_auto/cmake)
+[0.429s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.477s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.602s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.611s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.623s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.636s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.708s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.712s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.182s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.806s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.047s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.060s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.154s] -- Found PythonExtra: /usr/bin/python3  
+[2.527s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.617s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.623s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.628s] -- Added test 'lint_cmake' to check CMake code style
+[2.632s] -- Added test 'xmllint' to check XML markup files
+[2.638s] -- Configuring done (2.6s)
+[2.690s] -- Generating done (0.0s)
+[2.698s] -- Build files have been written to: /home/macho/navivest_ws/build/zed_msgs
+[2.711s] Invoked command in '/home/macho/navivest_ws/build/zed_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/macho/navivest_ws/src/zed-ros2-interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/macho/navivest_ws/install/zed_msgs
+[2.712s] Invoking command in '/home/macho/navivest_ws/build/zed_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/macho/navivest_ws/build/zed_msgs -- -j16 -l16
+[2.762s] [  0%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.762s] [  0%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[2.768s] [  0%] Built target ament_cmake_python_symlink_zed_msgs
+[2.891s] running egg_info
+[2.891s] creating zed_msgs.egg-info
+[2.900s] writing zed_msgs.egg-info/PKG-INFO
+[2.900s] writing dependency_links to zed_msgs.egg-info/dependency_links.txt
+[2.900s] writing top-level names to zed_msgs.egg-info/top_level.txt
+[2.900s] writing manifest file 'zed_msgs.egg-info/SOURCES.txt'
+[2.930s] reading manifest file 'zed_msgs.egg-info/SOURCES.txt'
+[2.930s] writing manifest file 'zed_msgs.egg-info/SOURCES.txt'
+[2.951s] [  0%] Built target ament_cmake_python_build_zed_msgs_egg
+[3.512s] [  0%] Built target zed_msgs__rosidl_generator_type_description
+[3.523s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.533s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.543s] [  1%] Built target zed_msgs__rs
+[4.826s] [  1%] Built target zed_msgs__cpp
+[5.069s] [  3%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint2_di__description.c.o[0m
+[5.069s] [  3%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/object__description.c.o[0m
+[5.069s] [  4%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/objects_stamped__functions.c.o[0m
+[5.069s] [  3%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/object__functions.c.o[0m
+[5.069s] [  4%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint2_di__functions.c.o[0m
+[5.069s] [  4%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint2_di__type_support.c.o[0m
+[5.069s] [  4%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/objects_stamped__description.c.o[0m
+[5.069s] [  4%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint2_df__functions.c.o[0m
+[5.069s] [  4%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint2_df__type_support.c.o[0m
+[5.070s] [  4%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/objects_stamped__type_support.c.o[0m
+[5.070s] [  3%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/object__type_support.c.o[0m
+[5.070s] [  5%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint2_df__description.c.o[0m
+[5.070s] [  5%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint3_d__functions.c.o[0m
+[5.070s] [  6%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint3_d__description.c.o[0m
+[5.076s] [  6%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box2_di__description.c.o[0m
+[5.079s] [  7%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/keypoint3_d__type_support.c.o[0m
+[5.108s] [  7%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box2_di__functions.c.o[0m
+[5.112s] [  8%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box2_di__type_support.c.o[0m
+[5.114s] [  8%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box2_df__description.c.o[0m
+[5.117s] [  8%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box2_df__type_support.c.o[0m
+[5.121s] [  9%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box2_df__functions.c.o[0m
+[5.122s] [  9%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box3_d__description.c.o[0m
+[5.125s] [ 10%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/skeleton2_d__description.c.o[0m
+[5.125s] [ 10%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box3_d__functions.c.o[0m
+[5.125s] [ 10%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/bounding_box3_d__type_support.c.o[0m
+[5.127s] [ 10%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/skeleton2_d__type_support.c.o[0m
+[5.128s] [ 11%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/skeleton2_d__functions.c.o[0m
+[5.128s] [ 12%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/skeleton3_d__description.c.o[0m
+[5.132s] [ 12%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/skeleton3_d__functions.c.o[0m
+[5.141s] [ 13%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/skeleton3_d__type_support.c.o[0m
+[5.141s] [ 13%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/depth_info_stamped__description.c.o[0m
+[5.141s] [ 13%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/depth_info_stamped__functions.c.o[0m
+[5.150s] [ 14%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/depth_info_stamped__type_support.c.o[0m
+[5.154s] [ 14%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/plane_stamped__description.c.o[0m
+[5.162s] [ 14%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/plane_stamped__functions.c.o[0m
+[5.162s] [ 15%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/plane_stamped__type_support.c.o[0m
+[5.166s] [ 15%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/pos_track_status__description.c.o[0m
+[5.167s] [ 15%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/pos_track_status__type_support.c.o[0m
+[5.169s] [ 16%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/gnss_fusion_status__functions.c.o[0m
+[5.169s] [ 16%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/gnss_fusion_status__description.c.o[0m
+[5.173s] [ 17%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/pos_track_status__functions.c.o[0m
+[5.175s] [ 18%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/gnss_fusion_status__type_support.c.o[0m
+[5.175s] [ 18%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/heartbeat__description.c.o[0m
+[5.187s] [ 19%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/mag_heading_status__description.c.o[0m
+[5.189s] [ 19%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/heartbeat__functions.c.o[0m
+[5.190s] [ 19%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/heartbeat__type_support.c.o[0m
+[5.194s] [ 19%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/mag_heading_status__functions.c.o[0m
+[5.196s] [ 20%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/mag_heading_status__type_support.c.o[0m
+[5.198s] [ 20%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/svo_status__description.c.o[0m
+[5.199s] [ 20%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/svo_status__functions.c.o[0m
+[5.206s] [ 21%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/svo_status__type_support.c.o[0m
+[5.212s] [ 22%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/health_status_stamped__functions.c.o[0m
+[5.212s] [ 22%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/health_status_stamped__type_support.c.o[0m
+[5.213s] [ 22%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/msg/detail/health_status_stamped__description.c.o[0m
+[5.220s] [ 22%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_pose__description.c.o[0m
+[5.224s] [ 23%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_pose__functions.c.o[0m
+[5.233s] [ 23%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/start_svo_rec__description.c.o[0m
+[5.233s] [ 23%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_pose__type_support.c.o[0m
+[5.233s] [ 24%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/start_svo_rec__functions.c.o[0m
+[5.233s] [ 24%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/start_svo_rec__type_support.c.o[0m
+[5.239s] [ 25%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_roi__description.c.o[0m
+[5.240s] [ 25%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_roi__functions.c.o[0m
+[5.246s] [ 25%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_roi__type_support.c.o[0m
+[5.251s] [ 26%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_svo_frame__description.c.o[0m
+[5.254s] [ 27%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_svo_frame__type_support.c.o[0m
+[5.255s] [ 27%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/save_area_memory__functions.c.o[0m
+[5.255s] [ 27%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/save_area_memory__description.c.o[0m
+[5.261s] [ 27%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/set_svo_frame__functions.c.o[0m
+[5.273s] [ 28%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_c.dir/rosidl_generator_c/zed_msgs/srv/detail/save_area_memory__type_support.c.o[0m
+[5.320s] [ 28%] [32m[1mLinking C shared library libzed_msgs__rosidl_generator_c.so[0m
+[5.359s] [ 28%] Built target zed_msgs__rosidl_generator_c
+[5.368s] [ 30%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.368s] [ 30%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.368s] [ 30%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.368s] [ 30%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.368s] [ 30%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.368s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[6.411s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/bounding_box2_df__type_support.cpp.o[0m
+[6.411s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/keypoint3_d__type_support.cpp.o[0m
+[6.411s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/keypoint2_df__type_support.cpp.o[0m
+[6.411s] [ 32%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/objects_stamped__type_support.cpp.o[0m
+[6.411s] [ 33%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/keypoint2_di__type_support.cpp.o[0m
+[6.411s] [ 33%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/bounding_box2_di__type_support.cpp.o[0m
+[6.411s] [ 33%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/skeleton3_d__type_support.cpp.o[0m
+[6.411s] [ 33%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/object__type_support.cpp.o[0m
+[6.411s] [ 34%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/skeleton2_d__type_support.cpp.o[0m
+[6.411s] [ 34%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/bounding_box3_d__type_support.cpp.o[0m
+[6.411s] [ 35%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/depth_info_stamped__type_support.cpp.o[0m
+[6.423s] [ 36%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/object__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/heartbeat__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/plane_stamped__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/keypoint3_d__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/objects_stamped__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/pos_track_status__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/bounding_box2_di__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/gnss_fusion_status__type_support.cpp.o[0m
+[6.471s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/keypoint2_di__type_support.cpp.o[0m
+[6.472s] [ 38%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/keypoint2_df__type_support.cpp.o[0m
+[6.472s] [ 39%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/bounding_box2_df__type_support.cpp.o[0m
+[6.482s] [ 40%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/mag_heading_status__type_support.cpp.o[0m
+[6.522s] [ 40%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/svo_status__type_support.cpp.o[0m
+[6.522s] [ 40%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/bounding_box3_d__type_support.cpp.o[0m
+[6.522s] [ 41%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/msg/health_status_stamped__type_support.cpp.o[0m
+[6.522s] [ 41%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/srv/set_pose__type_support.cpp.o[0m
+[6.535s] [ 42%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/skeleton2_d__type_support.cpp.o[0m
+[6.573s] [ 42%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/skeleton3_d__type_support.cpp.o[0m
+[6.573s] [ 42%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/srv/start_svo_rec__type_support.cpp.o[0m
+[6.578s] [ 42%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/depth_info_stamped__type_support.cpp.o[0m
+[6.633s] [ 43%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/srv/set_roi__type_support.cpp.o[0m
+[6.692s] [ 43%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/srv/set_svo_frame__type_support.cpp.o[0m
+[6.751s] [ 43%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/zed_msgs/srv/save_area_memory__type_support.cpp.o[0m
+[6.779s] [ 44%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/plane_stamped__type_support.cpp.o[0m
+[6.808s] [ 44%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/pos_track_status__type_support.cpp.o[0m
+[6.808s] [ 45%] [32m[1mLinking CXX shared library libzed_msgs__rosidl_typesupport_c.so[0m
+[6.810s] [ 46%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/gnss_fusion_status__type_support.cpp.o[0m
+[6.820s] [ 46%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/heartbeat__type_support.cpp.o[0m
+[6.835s] [ 46%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/mag_heading_status__type_support.cpp.o[0m
+[6.853s] [ 47%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/svo_status__type_support.cpp.o[0m
+[6.856s] [ 47%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/msg/health_status_stamped__type_support.cpp.o[0m
+[6.866s] [ 48%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/srv/set_pose__type_support.cpp.o[0m
+[6.866s] [ 48%] Built target zed_msgs__rosidl_typesupport_c
+[6.881s] [ 48%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/srv/start_svo_rec__type_support.cpp.o[0m
+[6.887s] [ 48%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/srv/set_roi__type_support.cpp.o[0m
+[6.928s] [ 49%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/srv/set_svo_frame__type_support.cpp.o[0m
+[6.930s] [ 49%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/zed_msgs/srv/save_area_memory__type_support.cpp.o[0m
+[7.069s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/object__type_support.cpp.o[0m
+[7.145s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/objects_stamped__type_support.cpp.o[0m
+[7.155s] [ 51%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/keypoint2_di__type_support.cpp.o[0m
+[7.155s] [ 51%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/keypoint2_df__type_support.cpp.o[0m
+[7.167s] [ 51%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/keypoint3_d__type_support.cpp.o[0m
+[7.176s] [ 51%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/object__type_support.c.o[0m
+[7.187s] [ 52%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/bounding_box2_di__type_support.cpp.o[0m
+[7.196s] [ 52%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/objects_stamped__type_support.c.o[0m
+[7.209s] [ 53%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/keypoint2_di__type_support.c.o[0m
+[7.239s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/bounding_box2_df__type_support.cpp.o[0m
+[7.261s] [ 53%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/keypoint2_df__type_support.c.o[0m
+[7.261s] [ 53%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/bounding_box3_d__type_support.cpp.o[0m
+[7.311s] [ 54%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/keypoint3_d__type_support.c.o[0m
+[7.331s] [ 55%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/skeleton2_d__type_support.cpp.o[0m
+[7.347s] [ 55%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/bounding_box2_di__type_support.c.o[0m
+[7.347s] [ 55%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/bounding_box2_df__type_support.c.o[0m
+[7.368s] [ 56%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/bounding_box3_d__type_support.c.o[0m
+[7.378s] [ 56%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/skeleton3_d__type_support.cpp.o[0m
+[7.378s] [ 57%] [32m[1mLinking CXX shared library libzed_msgs__rosidl_typesupport_cpp.so[0m
+[7.394s] [ 58%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/depth_info_stamped__type_support.cpp.o[0m
+[7.410s] [ 58%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/skeleton2_d__type_support.c.o[0m
+[7.415s] [ 58%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/plane_stamped__type_support.cpp.o[0m
+[7.463s] [ 58%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/skeleton3_d__type_support.c.o[0m
+[7.488s] [ 59%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/depth_info_stamped__type_support.c.o[0m
+[7.513s] [ 59%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/pos_track_status__type_support.cpp.o[0m
+[7.516s] [ 60%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/gnss_fusion_status__type_support.cpp.o[0m
+[7.523s] [ 60%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/plane_stamped__type_support.c.o[0m
+[7.523s] [ 60%] Built target zed_msgs__rosidl_typesupport_cpp
+[7.536s] [ 61%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/pos_track_status__type_support.c.o[0m
+[7.536s] [ 61%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/gnss_fusion_status__type_support.c.o[0m
+[7.551s] [ 62%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/heartbeat__type_support.cpp.o[0m
+[7.551s] [ 62%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/mag_heading_status__type_support.cpp.o[0m
+[7.580s] [ 62%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/svo_status__type_support.cpp.o[0m
+[7.581s] [ 62%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/heartbeat__type_support.c.o[0m
+[7.588s] [ 62%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/msg/detail/health_status_stamped__type_support.cpp.o[0m
+[7.608s] [ 63%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/srv/detail/start_svo_rec__type_support.cpp.o[0m
+[7.608s] [ 63%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/srv/detail/set_pose__type_support.cpp.o[0m
+[7.614s] [ 63%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/object__type_support.cpp.o[0m
+[7.627s] [ 64%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/mag_heading_status__type_support.c.o[0m
+[7.627s] [ 65%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/srv/detail/set_roi__type_support.cpp.o[0m
+[7.674s] [ 65%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/svo_status__type_support.c.o[0m
+[7.698s] [ 66%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/msg/detail/health_status_stamped__type_support.c.o[0m
+[7.723s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/objects_stamped__type_support.cpp.o[0m
+[7.750s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/keypoint2_di__type_support.cpp.o[0m
+[7.750s] [ 67%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/srv/detail/set_pose__type_support.c.o[0m
+[7.751s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/srv/detail/set_svo_frame__type_support.cpp.o[0m
+[7.758s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/object__type_support_c.cpp.o[0m
+[7.817s] [ 67%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/srv/detail/start_svo_rec__type_support.c.o[0m
+[7.840s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/zed_msgs/srv/detail/save_area_memory__type_support.cpp.o[0m
+[7.861s] [ 67%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/keypoint2_df__type_support.cpp.o[0m
+[7.878s] [ 68%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/srv/detail/set_roi__type_support.c.o[0m
+[7.884s] [ 69%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/objects_stamped__type_support_c.cpp.o[0m
+[7.900s] [ 70%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/srv/detail/set_svo_frame__type_support.c.o[0m
+[7.900s] [ 70%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/keypoint3_d__type_support.cpp.o[0m
+[7.936s] [ 71%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/zed_msgs/srv/detail/save_area_memory__type_support.c.o[0m
+[7.940s] [ 71%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/keypoint2_di__type_support_c.cpp.o[0m
+[7.959s] [ 71%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/bounding_box2_di__type_support.cpp.o[0m
+[7.963s] [ 71%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/bounding_box2_df__type_support.cpp.o[0m
+[7.995s] [ 71%] [32m[1mLinking C shared library libzed_msgs__rosidl_typesupport_introspection_c.so[0m
+[8.052s] [ 71%] Built target zed_msgs__rosidl_typesupport_introspection_c
+[8.066s] [ 72%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/keypoint2_df__type_support_c.cpp.o[0m
+[8.093s] [ 72%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/keypoint3_d__type_support_c.cpp.o[0m
+[8.093s] [ 72%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/bounding_box2_di__type_support_c.cpp.o[0m
+[8.140s] [ 73%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/bounding_box3_d__type_support.cpp.o[0m
+[8.209s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/bounding_box2_df__type_support_c.cpp.o[0m
+[8.225s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/skeleton2_d__type_support.cpp.o[0m
+[8.288s] [ 74%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/bounding_box3_d__type_support_c.cpp.o[0m
+[8.327s] [ 75%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/skeleton3_d__type_support.cpp.o[0m
+[8.332s] [ 76%] [32m[1mLinking CXX shared library libzed_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[8.335s] [ 76%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/skeleton2_d__type_support_c.cpp.o[0m
+[8.393s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/skeleton3_d__type_support_c.cpp.o[0m
+[8.409s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/depth_info_stamped__type_support.cpp.o[0m
+[8.438s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/depth_info_stamped__type_support_c.cpp.o[0m
+[8.479s] [ 77%] Built target zed_msgs__rosidl_typesupport_introspection_cpp
+[8.491s] [ 77%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/plane_stamped__type_support.cpp.o[0m
+[8.491s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/pos_track_status__type_support.cpp.o[0m
+[8.491s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/plane_stamped__type_support_c.cpp.o[0m
+[8.494s] [ 79%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/gnss_fusion_status__type_support.cpp.o[0m
+[8.582s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/heartbeat__type_support.cpp.o[0m
+[8.596s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/mag_heading_status__type_support.cpp.o[0m
+[8.604s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/svo_status__type_support.cpp.o[0m
+[8.679s] [ 80%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/pos_track_status__type_support_c.cpp.o[0m
+[8.721s] [ 81%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/msg/detail/dds_fastrtps/health_status_stamped__type_support.cpp.o[0m
+[8.756s] [ 81%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/gnss_fusion_status__type_support_c.cpp.o[0m
+[8.828s] [ 81%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o[0m
+[8.829s] [ 82%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/heartbeat__type_support_c.cpp.o[0m
+[8.856s] [ 83%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/srv/detail/dds_fastrtps/start_svo_rec__type_support.cpp.o[0m
+[8.909s] [ 83%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/mag_heading_status__type_support_c.cpp.o[0m
+[8.949s] [ 84%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/svo_status__type_support_c.cpp.o[0m
+[8.973s] [ 84%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/srv/detail/dds_fastrtps/set_roi__type_support.cpp.o[0m
+[9.012s] [ 84%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/msg/detail/health_status_stamped__type_support_c.cpp.o[0m
+[9.026s] [ 84%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/srv/detail/set_pose__type_support_c.cpp.o[0m
+[9.030s] [ 84%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/srv/detail/dds_fastrtps/set_svo_frame__type_support.cpp.o[0m
+[9.096s] [ 85%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/srv/detail/start_svo_rec__type_support_c.cpp.o[0m
+[9.119s] [ 85%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/srv/detail/set_roi__type_support_c.cpp.o[0m
+[9.138s] [ 86%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/srv/detail/set_svo_frame__type_support_c.cpp.o[0m
+[9.164s] [ 86%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/zed_msgs/srv/detail/save_area_memory__type_support_c.cpp.o[0m
+[9.213s] [ 87%] [32mBuilding CXX object CMakeFiles/zed_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/zed_msgs/srv/detail/dds_fastrtps/save_area_memory__type_support.cpp.o[0m
+[9.624s] [ 87%] [32m[1mLinking CXX shared library libzed_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[9.685s] [ 87%] Built target zed_msgs__rosidl_typesupport_fastrtps_c
+[9.744s] [ 87%] [32m[1mLinking CXX shared library libzed_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.812s] [ 87%] Built target zed_msgs__rosidl_typesupport_fastrtps_cpp
+[9.835s] [ 87%] Built target zed_msgs
+[9.852s] [ 87%] [34m[1mGenerating Python code for ROS interfaces[0m
+[11.968s] [ 87%] Built target zed_msgs__py
+[11.987s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_keypoint3_d_s.c.o[0m
+[11.987s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_bounding_box3_d_s.c.o[0m
+[11.987s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_skeleton3_d_s.c.o[0m
+[11.987s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_skeleton2_d_s.c.o[0m
+[11.987s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_keypoint2_di_s.c.o[0m
+[11.988s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_bounding_box2_di_s.c.o[0m
+[11.988s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_object_s.c.o[0m
+[11.988s] [ 91%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_keypoint2_df_s.c.o[0m
+[11.988s] [ 91%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_bounding_box2_df_s.c.o[0m
+[11.988s] [ 91%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_depth_info_stamped_s.c.o[0m
+[11.988s] [ 91%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_pos_track_status_s.c.o[0m
+[11.988s] [ 90%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_objects_stamped_s.c.o[0m
+[11.988s] [ 93%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_mag_heading_status_s.c.o[0m
+[11.988s] [ 93%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_heartbeat_s.c.o[0m
+[11.988s] [ 93%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_gnss_fusion_status_s.c.o[0m
+[11.988s] [ 93%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_plane_stamped_s.c.o[0m
+[12.129s] [ 95%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/srv/_start_svo_rec_s.c.o[0m
+[12.129s] [ 95%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/srv/_set_roi_s.c.o[0m
+[12.129s] [ 95%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/srv/_set_svo_frame_s.c.o[0m
+[12.129s] [ 95%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_health_status_stamped_s.c.o[0m
+[12.129s] [ 95%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/msg/_svo_status_s.c.o[0m
+[12.130s] [ 96%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/srv/_set_pose_s.c.o[0m
+[12.130s] [ 96%] [32mBuilding C object CMakeFiles/zed_msgs__rosidl_generator_py.dir/rosidl_generator_py/zed_msgs/srv/_save_area_memory_s.c.o[0m
+[12.240s] [ 97%] [32m[1mLinking C shared library libzed_msgs__rosidl_generator_py.so[0m
+[12.280s] [ 97%] Built target zed_msgs__rosidl_generator_py
+[12.297s] [ 98%] [32mBuilding C object CMakeFiles/zed_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/zed_msgs/_zed_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[12.297s] [ 98%] [32mBuilding C object CMakeFiles/zed_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/zed_msgs/_zed_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[12.297s] [ 98%] [32mBuilding C object CMakeFiles/zed_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/zed_msgs/_zed_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[12.421s] [ 99%] [32m[1mLinking C shared module rosidl_generator_py/zed_msgs/zed_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[12.421s] [ 99%] [32m[1mLinking C shared module rosidl_generator_py/zed_msgs/zed_msgs_s__rosidl_typesupport_c.so[0m
+[12.424s] [100%] [32m[1mLinking C shared module rosidl_generator_py/zed_msgs/zed_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[12.446s] [100%] Built target zed_msgs_s__rosidl_typesupport_introspection_c
+[12.446s] [100%] Built target zed_msgs_s__rosidl_typesupport_c
+[12.448s] [100%] Built target zed_msgs_s__rosidl_typesupport_fastrtps_c
+[12.461s] Invoked command in '/home/macho/navivest_ws/build/zed_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/macho/navivest_ws/build/zed_msgs -- -j16 -l16
+[12.468s] Invoking command in '/home/macho/navivest_ws/build/zed_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/macho/navivest_ws/build/zed_msgs
+[12.473s] -- Install configuration: ""
+[12.474s] -- Execute custom install script
+[12.474s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/ament_index/resource_index/rosidl_interfaces/zed_msgs
+[12.480s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Object.json
+[12.486s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/ObjectsStamped.json
+[12.493s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint2Di.json
+[12.499s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint2Df.json
+[12.505s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint3D.json
+[12.511s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox2Di.json
+[12.518s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox2Df.json
+[12.524s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox3D.json
+[12.531s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Skeleton2D.json
+[12.541s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Skeleton3D.json
+[12.549s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/DepthInfoStamped.json
+[12.556s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/PlaneStamped.json
+[12.563s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/PosTrackStatus.json
+[12.570s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/GnssFusionStatus.json
+[12.577s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Heartbeat.json
+[12.583s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/MagHeadingStatus.json
+[12.590s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/SvoStatus.json
+[12.596s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/HealthStatusStamped.json
+[12.602s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetPose.json
+[12.609s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/StartSvoRec.json
+[12.615s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetROI.json
+[12.621s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetSvoFrame.json
+[12.628s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SaveAreaMemory.json
+[12.635s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/bounding_box2_df.h
+[12.641s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/bounding_box2_di.h
+[12.647s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/bounding_box3_d.h
+[12.656s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/depth_info_stamped.h
+[12.663s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__functions.h
+[12.670s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__struct.h
+[12.676s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__type_support.h
+[12.683s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__functions.h
+[12.689s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__struct.h
+[12.695s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__type_support.h
+[12.701s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__functions.h
+[12.707s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__struct.h
+[12.714s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__type_support.h
+[12.720s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__functions.h
+[12.726s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__struct.h
+[12.733s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__type_support.h
+[12.742s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__functions.h
+[12.749s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__struct.h
+[12.757s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__type_support.h
+[12.763s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__functions.h
+[12.770s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__struct.h
+[12.776s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__type_support.h
+[12.782s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__functions.h
+[12.788s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__struct.h
+[12.795s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__type_support.h
+[12.802s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__functions.h
+[12.808s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__struct.h
+[12.814s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__type_support.h
+[12.820s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__functions.h
+[12.826s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__struct.h
+[12.832s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__type_support.h
+[12.838s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__functions.h
+[12.845s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__struct.h
+[12.856s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__type_support.h
+[12.863s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__functions.h
+[12.869s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__struct.h
+[12.876s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__type_support.h
+[12.882s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__functions.h
+[12.888s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__struct.h
+[12.894s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__type_support.h
+[12.901s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__functions.h
+[12.907s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__struct.h
+[12.913s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__type_support.h
+[12.919s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__functions.h
+[12.925s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__struct.h
+[12.932s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__type_support.h
+[12.941s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__functions.h
+[12.948s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__struct.h
+[12.956s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__type_support.h
+[12.962s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__functions.h
+[12.969s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__struct.h
+[12.975s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__type_support.h
+[12.982s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__functions.h
+[12.988s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__struct.h
+[12.995s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__type_support.h
+[13.001s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__functions.h
+[13.006s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__struct.h
+[13.013s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__type_support.h
+[13.019s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/gnss_fusion_status.h
+[13.025s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/health_status_stamped.h
+[13.031s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/heartbeat.h
+[13.038s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/keypoint2_df.h
+[13.044s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/keypoint2_di.h
+[13.054s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/keypoint3_d.h
+[13.060s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/mag_heading_status.h
+[13.067s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/object.h
+[13.073s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/objects_stamped.h
+[13.079s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/plane_stamped.h
+[13.086s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/pos_track_status.h
+[13.092s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/rosidl_generator_c__visibility_control.h
+[13.098s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/skeleton2_d.h
+[13.104s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/skeleton3_d.h
+[13.110s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/svo_status.h
+[13.117s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__functions.h
+[13.123s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__struct.h
+[13.130s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__type_support.h
+[13.139s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__functions.h
+[13.146s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__struct.h
+[13.154s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__type_support.h
+[13.161s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__functions.h
+[13.168s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__struct.h
+[13.174s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__type_support.h
+[13.180s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__functions.h
+[13.187s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__struct.h
+[13.193s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__type_support.h
+[13.200s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__functions.h
+[13.206s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__struct.h
+[13.212s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__type_support.h
+[13.218s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/save_area_memory.h
+[13.224s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/set_pose.h
+[13.230s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/set_roi.h
+[13.236s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/set_svo_frame.h
+[13.242s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/start_svo_rec.h
+[13.250s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/library_path.sh
+[13.260s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/library_path.dsv
+[13.267s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_c.h
+[13.274s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_c.h
+[13.280s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_c.h
+[13.287s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_c.h
+[13.294s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__rosidl_typesupport_fastrtps_c.h
+[13.300s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__rosidl_typesupport_fastrtps_c.h
+[13.306s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__rosidl_typesupport_fastrtps_c.h
+[13.312s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_c.h
+[13.318s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_c.h
+[13.324s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_c.h
+[13.330s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__rosidl_typesupport_fastrtps_c.h
+[13.340s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__rosidl_typesupport_fastrtps_c.h
+[13.347s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_c.h
+[13.355s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_c.h
+[13.362s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_c.h
+[13.369s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_c.h
+[13.375s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_c.h
+[13.381s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__rosidl_typesupport_fastrtps_c.h
+[13.388s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[13.394s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__rosidl_typesupport_fastrtps_c.h
+[13.400s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h
+[13.407s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__rosidl_typesupport_fastrtps_c.h
+[13.412s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__rosidl_typesupport_fastrtps_c.h
+[13.418s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_c.h
+[13.425s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/bounding_box2_df.hpp
+[13.431s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/bounding_box2_di.hpp
+[13.438s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/bounding_box3_d.hpp
+[13.444s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/depth_info_stamped.hpp
+[13.454s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__builder.hpp
+[13.461s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__struct.hpp
+[13.467s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__traits.hpp
+[13.474s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__type_support.hpp
+[13.480s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__builder.hpp
+[13.486s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__struct.hpp
+[13.493s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__traits.hpp
+[13.499s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__type_support.hpp
+[13.506s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__builder.hpp
+[13.512s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__struct.hpp
+[13.517s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__traits.hpp
+[13.524s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__type_support.hpp
+[13.530s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__builder.hpp
+[13.540s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__struct.hpp
+[13.547s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__traits.hpp
+[13.555s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__type_support.hpp
+[13.562s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__builder.hpp
+[13.568s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__struct.hpp
+[13.574s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__traits.hpp
+[13.581s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__type_support.hpp
+[13.587s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__builder.hpp
+[13.593s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__struct.hpp
+[13.600s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__traits.hpp
+[13.606s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__type_support.hpp
+[13.612s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__builder.hpp
+[13.619s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__struct.hpp
+[13.625s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__traits.hpp
+[13.631s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__type_support.hpp
+[13.637s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__builder.hpp
+[13.643s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__struct.hpp
+[13.652s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__traits.hpp
+[13.659s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__type_support.hpp
+[13.666s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__builder.hpp
+[13.672s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__struct.hpp
+[13.679s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__traits.hpp
+[13.686s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__type_support.hpp
+[13.692s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__builder.hpp
+[13.698s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__struct.hpp
+[13.704s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__traits.hpp
+[13.711s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__type_support.hpp
+[13.717s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__builder.hpp
+[13.723s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__struct.hpp
+[13.730s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__traits.hpp
+[13.736s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__type_support.hpp
+[13.743s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__builder.hpp
+[13.753s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__struct.hpp
+[13.763s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__traits.hpp
+[13.769s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__type_support.hpp
+[13.776s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__builder.hpp
+[13.782s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__struct.hpp
+[13.789s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__traits.hpp
+[13.795s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__type_support.hpp
+[13.801s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__builder.hpp
+[13.808s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__struct.hpp
+[13.814s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__traits.hpp
+[13.821s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__type_support.hpp
+[13.827s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__builder.hpp
+[13.833s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__struct.hpp
+[13.840s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__traits.hpp
+[13.846s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__type_support.hpp
+[13.856s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__builder.hpp
+[13.863s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__struct.hpp
+[13.869s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__traits.hpp
+[13.875s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__type_support.hpp
+[13.881s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__builder.hpp
+[13.888s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__struct.hpp
+[13.894s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__traits.hpp
+[13.901s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__type_support.hpp
+[13.907s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__builder.hpp
+[13.913s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__struct.hpp
+[13.919s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__traits.hpp
+[13.925s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__type_support.hpp
+[13.931s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/gnss_fusion_status.hpp
+[13.938s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/health_status_stamped.hpp
+[13.944s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/heartbeat.hpp
+[13.954s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/keypoint2_df.hpp
+[13.961s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/keypoint2_di.hpp
+[13.967s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/keypoint3_d.hpp
+[13.973s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/mag_heading_status.hpp
+[13.979s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/object.hpp
+[13.986s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/objects_stamped.hpp
+[13.992s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/plane_stamped.hpp
+[13.997s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/pos_track_status.hpp
+[14.003s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[14.009s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/skeleton2_d.hpp
+[14.015s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/skeleton3_d.hpp
+[14.021s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/svo_status.hpp
+[14.027s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__builder.hpp
+[14.034s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__struct.hpp
+[14.040s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__traits.hpp
+[14.046s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__type_support.hpp
+[14.056s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__builder.hpp
+[14.063s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__struct.hpp
+[14.069s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__traits.hpp
+[14.076s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__type_support.hpp
+[14.082s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__builder.hpp
+[14.088s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__struct.hpp
+[14.095s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__traits.hpp
+[14.101s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__type_support.hpp
+[14.107s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__builder.hpp
+[14.113s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__struct.hpp
+[14.120s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__traits.hpp
+[14.126s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__type_support.hpp
+[14.132s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__builder.hpp
+[14.138s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__struct.hpp
+[14.145s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__traits.hpp
+[14.155s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__type_support.hpp
+[14.161s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/save_area_memory.hpp
+[14.168s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/set_pose.hpp
+[14.175s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/set_roi.hpp
+[14.182s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/set_svo_frame.hpp
+[14.188s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/start_svo_rec.hpp
+[14.195s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[14.201s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[14.207s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[14.213s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[14.219s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.225s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[14.231s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__rosidl_typesupport_fastrtps_cpp.hpp
+[14.237s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__rosidl_typesupport_fastrtps_cpp.hpp
+[14.244s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__rosidl_typesupport_fastrtps_cpp.hpp
+[14.253s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[14.260s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.267s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__rosidl_typesupport_fastrtps_cpp.hpp
+[14.274s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[14.280s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[14.286s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.293s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__rosidl_typesupport_fastrtps_cpp.hpp
+[14.299s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[14.305s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.311s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[14.317s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__rosidl_typesupport_fastrtps_cpp.hpp
+[14.323s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[14.330s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__rosidl_typesupport_fastrtps_cpp.hpp
+[14.336s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__rosidl_typesupport_fastrtps_cpp.hpp
+[14.342s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__rosidl_typesupport_fastrtps_cpp.hpp
+[14.350s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_c.h
+[14.360s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_c.h
+[14.367s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_c.h
+[14.373s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_c.h
+[14.379s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__rosidl_typesupport_introspection_c.h
+[14.387s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__rosidl_typesupport_introspection_c.h
+[14.393s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__rosidl_typesupport_introspection_c.h
+[14.399s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__rosidl_typesupport_introspection_c.h
+[14.405s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__rosidl_typesupport_introspection_c.h
+[14.411s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__rosidl_typesupport_introspection_c.h
+[14.417s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__rosidl_typesupport_introspection_c.h
+[14.423s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__rosidl_typesupport_introspection_c.h
+[14.430s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__rosidl_typesupport_introspection_c.h
+[14.436s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__rosidl_typesupport_introspection_c.h
+[14.442s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__rosidl_typesupport_introspection_c.h
+[14.448s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__rosidl_typesupport_introspection_c.h
+[14.458s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__rosidl_typesupport_introspection_c.h
+[14.465s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__rosidl_typesupport_introspection_c.h
+[14.471s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[14.477s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__rosidl_typesupport_introspection_c.h
+[14.484s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__rosidl_typesupport_introspection_c.h
+[14.490s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__rosidl_typesupport_introspection_c.h
+[14.497s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__rosidl_typesupport_introspection_c.h
+[14.503s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__rosidl_typesupport_introspection_c.h
+[14.510s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_df__rosidl_typesupport_introspection_cpp.hpp
+[14.516s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box2_di__rosidl_typesupport_introspection_cpp.hpp
+[14.522s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_cpp.hpp
+[14.529s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/depth_info_stamped__rosidl_typesupport_introspection_cpp.hpp
+[14.535s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/gnss_fusion_status__rosidl_typesupport_introspection_cpp.hpp
+[14.540s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/health_status_stamped__rosidl_typesupport_introspection_cpp.hpp
+[14.547s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/heartbeat__rosidl_typesupport_introspection_cpp.hpp
+[14.557s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_df__rosidl_typesupport_introspection_cpp.hpp
+[14.564s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint2_di__rosidl_typesupport_introspection_cpp.hpp
+[14.571s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/keypoint3_d__rosidl_typesupport_introspection_cpp.hpp
+[14.577s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/mag_heading_status__rosidl_typesupport_introspection_cpp.hpp
+[14.584s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/object__rosidl_typesupport_introspection_cpp.hpp
+[14.591s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/objects_stamped__rosidl_typesupport_introspection_cpp.hpp
+[14.597s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/plane_stamped__rosidl_typesupport_introspection_cpp.hpp
+[14.604s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/pos_track_status__rosidl_typesupport_introspection_cpp.hpp
+[14.610s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton2_d__rosidl_typesupport_introspection_cpp.hpp
+[14.616s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/skeleton3_d__rosidl_typesupport_introspection_cpp.hpp
+[14.623s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/msg/detail/svo_status__rosidl_typesupport_introspection_cpp.hpp
+[14.629s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/save_area_memory__rosidl_typesupport_introspection_cpp.hpp
+[14.635s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp
+[14.642s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_roi__rosidl_typesupport_introspection_cpp.hpp
+[14.648s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/set_svo_frame__rosidl_typesupport_introspection_cpp.hpp
+[14.656s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/include/zed_msgs/zed_msgs/srv/detail/start_svo_rec__rosidl_typesupport_introspection_cpp.hpp
+[14.663s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/pythonpath.sh
+[14.670s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/pythonpath.dsv
+[14.676s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs-5.0.1-py3.12.egg-info/PKG-INFO
+[14.682s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs-5.0.1-py3.12.egg-info/SOURCES.txt
+[14.689s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs-5.0.1-py3.12.egg-info/dependency_links.txt
+[14.695s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs-5.0.1-py3.12.egg-info/top_level.txt
+[14.702s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/__init__.py
+[14.708s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/_zed_msgs_s.ep.rosidl_typesupport_c.c
+[14.714s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/_zed_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[14.720s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/_zed_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[14.726s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/__init__.py
+[14.732s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box2_df.py
+[14.738s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box2_df_s.c
+[14.744s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box2_di.py
+[14.753s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box2_di_s.c
+[14.760s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box3_d.py
+[14.766s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box3_d_s.c
+[14.773s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_depth_info_stamped.py
+[14.779s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_depth_info_stamped_s.c
+[14.785s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_gnss_fusion_status.py
+[14.792s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_gnss_fusion_status_s.c
+[14.798s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_health_status_stamped.py
+[14.809s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_health_status_stamped_s.c
+[14.815s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_heartbeat.py
+[14.821s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_heartbeat_s.c
+[14.828s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint2_df.py
+[14.835s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint2_df_s.c
+[14.841s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint2_di.py
+[14.847s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint2_di_s.c
+[14.857s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint3_d.py
+[14.864s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint3_d_s.c
+[14.870s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_mag_heading_status.py
+[14.876s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_mag_heading_status_s.c
+[14.882s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_object.py
+[14.888s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_object_s.c
+[14.894s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_objects_stamped.py
+[14.901s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_objects_stamped_s.c
+[14.907s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_plane_stamped.py
+[14.913s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_plane_stamped_s.c
+[14.919s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_pos_track_status.py
+[14.925s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_pos_track_status_s.c
+[14.931s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_skeleton2_d.py
+[14.937s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_skeleton2_d_s.c
+[14.943s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_skeleton3_d.py
+[14.949s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_skeleton3_d_s.c
+[14.959s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_svo_status.py
+[14.966s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_svo_status_s.c
+[14.972s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/__init__.py
+[14.978s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_save_area_memory.py
+[14.984s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_save_area_memory_s.c
+[14.990s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_pose.py
+[14.996s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_pose_s.c
+[15.006s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_roi.py
+[15.013s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_roi_s.c
+[15.019s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_svo_frame.py
+[15.026s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_svo_frame_s.c
+[15.032s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_start_svo_rec.py
+[15.038s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_start_svo_rec_s.c
+[15.044s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/zed_msgs_s__rosidl_typesupport_c.so
+[15.054s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/zed_msgs_s__rosidl_typesupport_fastrtps_c.so
+[15.062s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/zed_msgs_s__rosidl_typesupport_introspection_c.so
+[15.069s] -- Up-to-date symlink: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/zed_msgs_s__rosidl_typesupport_fastrtps_c.so
+[15.069s] -- Up-to-date symlink: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/zed_msgs_s__rosidl_typesupport_introspection_c.so
+[15.069s] -- Up-to-date symlink: /home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/zed_msgs_s__rosidl_typesupport_c.so
+[15.070s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/ament_index/resource_index/rust_packages/zed_msgs
+[15.076s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/rust/Cargo.toml
+[15.083s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/rust/build.rs
+[15.089s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/rust/src/lib.rs
+[15.096s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/rust/src/msg.rs
+[15.102s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/rust/src/msg/rmw.rs
+[15.109s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/rust/src/srv.rs
+[15.115s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/rust/src/srv/rmw.rs
+[15.122s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Object.idl
+[15.129s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/ObjectsStamped.idl
+[15.136s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint2Di.idl
+[15.142s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint2Df.idl
+[15.148s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint3D.idl
+[15.158s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox2Di.idl
+[15.164s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox2Df.idl
+[15.171s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox3D.idl
+[15.177s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Skeleton2D.idl
+[15.184s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Skeleton3D.idl
+[15.190s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/DepthInfoStamped.idl
+[15.196s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/PlaneStamped.idl
+[15.205s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/PosTrackStatus.idl
+[15.213s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/GnssFusionStatus.idl
+[15.219s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Heartbeat.idl
+[15.226s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/MagHeadingStatus.idl
+[15.232s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/SvoStatus.idl
+[15.238s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/HealthStatusStamped.idl
+[15.245s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetPose.idl
+[15.254s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/StartSvoRec.idl
+[15.261s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetROI.idl
+[15.268s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetSvoFrame.idl
+[15.274s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SaveAreaMemory.idl
+[15.281s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Object.msg
+[15.287s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/ObjectsStamped.msg
+[15.293s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint2Di.msg
+[15.300s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint2Df.msg
+[15.306s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Keypoint3D.msg
+[15.312s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox2Di.msg
+[15.319s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox2Df.msg
+[15.325s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/BoundingBox3D.msg
+[15.332s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Skeleton2D.msg
+[15.338s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Skeleton3D.msg
+[15.344s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/DepthInfoStamped.msg
+[15.354s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/PlaneStamped.msg
+[15.361s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/PosTrackStatus.msg
+[15.367s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/GnssFusionStatus.msg
+[15.374s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/Heartbeat.msg
+[15.380s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/MagHeadingStatus.msg
+[15.387s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/SvoStatus.msg
+[15.393s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/msg/HealthStatusStamped.msg
+[15.401s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetPose.srv
+[15.410s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/StartSvoRec.srv
+[15.416s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetROI.srv
+[15.423s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SetSvoFrame.srv
+[15.429s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/srv/SaveAreaMemory.srv
+[15.436s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/virtual.stl
+[15.442s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zed.stl
+[15.449s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zed2.stl
+[15.458s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zed2i.stl
+[15.464s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zedm.stl
+[15.471s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zedx.stl
+[15.477s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zedxm.stl
+[15.483s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zedxone4k.stl
+[15.490s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/meshes/zedxonegs.stl
+[15.496s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/ament_index/resource_index/package_run_dependencies/zed_msgs
+[15.502s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/ament_index/resource_index/parent_prefix_path/zed_msgs
+[15.508s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/ament_prefix_path.sh
+[15.515s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/ament_prefix_path.dsv
+[15.521s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/path.sh
+[15.528s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/environment/path.dsv
+[15.534s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/local_setup.bash
+[15.540s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/local_setup.sh
+[15.547s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/local_setup.zsh
+[15.557s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/local_setup.dsv
+[15.564s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/package.dsv
+[15.570s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/ament_index/resource_index/packages/zed_msgs
+[15.576s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/rosidl_cmake-extras.cmake
+[15.582s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.589s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.595s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[15.604s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[15.611s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[15.618s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[15.624s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgsConfig.cmake
+[15.631s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgsConfig-version.cmake
+[15.637s] -- Symlinking: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/package.xml
+[15.644s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_generator_c.so
+[15.644s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_generator_c.so" to ""
+[15.644s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_fastrtps_c.so
+[15.645s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[15.645s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_fastrtps_cpp.so
+[15.645s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[15.645s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_introspection_c.so
+[15.646s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_introspection_c.so" to ""
+[15.646s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_c.so
+[15.646s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_c.so" to ""
+[15.646s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_introspection_cpp.so
+[15.647s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[15.647s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_cpp.so
+[15.647s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_typesupport_cpp.so" to ""
+[15.699s] Listing '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/__init__.py'...
+[15.699s] Listing '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/__init__.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box2_df.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box2_di.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_bounding_box3_d.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_depth_info_stamped.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_gnss_fusion_status.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_health_status_stamped.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_heartbeat.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint2_df.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint2_di.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_keypoint3_d.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_mag_heading_status.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_object.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_objects_stamped.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_plane_stamped.py'...
+[15.699s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_pos_track_status.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_skeleton2_d.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_skeleton3_d.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/msg/_svo_status.py'...
+[15.700s] Listing '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/__init__.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_save_area_memory.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_pose.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_roi.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_set_svo_frame.py'...
+[15.700s] Compiling '/home/macho/navivest_ws/install/zed_msgs/lib/python3.12/site-packages/zed_msgs/srv/_start_svo_rec.py'...
+[15.703s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_generator_py.so
+[15.703s] -- Set non-toolchain portion of runtime path of "/home/macho/navivest_ws/install/zed_msgs/lib/libzed_msgs__rosidl_generator_py.so" to ""
+[15.703s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_generator_cExport.cmake
+[15.703s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_generator_cExport-noconfig.cmake
+[15.703s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_generator_cppExport.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_introspection_cExport.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_cExport.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_cppExport.cmake
+[15.704s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/zed_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[15.705s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_generator_pyExport.cmake
+[15.705s] -- Installing: /home/macho/navivest_ws/install/zed_msgs/share/zed_msgs/cmake/export_zed_msgs__rosidl_generator_pyExport-noconfig.cmake
+[15.707s] Invoked command in '/home/macho/navivest_ws/build/zed_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/macho/navivest_ws/install/nav2_loopback_sim:/home/macho/navivest_ws/install/navivest_bringup:/home/macho/navivest_ws/install/bondpy:/home/macho/navivest_ws/install/navivest_guidance:/home/macho/navivest_ws/install/nav2_simple_commander:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/macho/navivest_ws/build/zed_msgs

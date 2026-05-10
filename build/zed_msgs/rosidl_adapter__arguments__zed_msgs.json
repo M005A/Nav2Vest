@@ -1,0 +1,28 @@
+{
+  "package_name": "zed_msgs",
+  "non_idl_tuples": [
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/Object.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/ObjectsStamped.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/Keypoint2Di.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/Keypoint2Df.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/Keypoint3D.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/BoundingBox2Di.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/BoundingBox2Df.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/BoundingBox3D.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/Skeleton2D.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/Skeleton3D.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/DepthInfoStamped.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/PlaneStamped.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/PosTrackStatus.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/GnssFusionStatus.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/Heartbeat.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/MagHeadingStatus.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/SvoStatus.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:msg/HealthStatusStamped.msg",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:srv/SetPose.srv",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:srv/StartSvoRec.srv",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:srv/SetROI.srv",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:srv/SetSvoFrame.srv",
+    "/home/macho/navivest_ws/src/zed-ros2-interfaces:srv/SaveAreaMemory.srv"
+  ]
+}

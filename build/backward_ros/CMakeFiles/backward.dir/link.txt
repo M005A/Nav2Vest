@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wall -Wextra -pedantic-errors -g -shared -Wl,-soname,libbackward.so -o libbackward.so CMakeFiles/backward.dir/src/backward.cpp.o  /usr/lib/x86_64-linux-gnu/libdw.so 

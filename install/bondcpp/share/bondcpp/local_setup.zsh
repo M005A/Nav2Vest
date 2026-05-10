@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/build/bondcpp/ament_cmake_environment_hooks/local_setup.zsh

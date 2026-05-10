@@ -1,0 +1,7 @@
+{
+  "package_name": "bond",
+  "non_idl_tuples": [
+    "/home/macho/navivest_ws/src/bond_core/bond:msg/Constants.msg",
+    "/home/macho/navivest_ws/src/bond_core/bond:msg/Status.msg"
+  ]
+}

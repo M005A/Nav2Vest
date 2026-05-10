@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/build/smclib/ament_cmake_environment_hooks/local_setup.zsh

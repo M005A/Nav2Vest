@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/build/zed_msgs/rosidl_generator_cpp/zed_msgs/msg/detail/bounding_box2_di__type_support.hpp

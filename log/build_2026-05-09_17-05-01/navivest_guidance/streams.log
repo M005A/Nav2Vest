@@ -1,0 +1,26 @@
+[0.547s] Invoking command in '/home/macho/navivest_ws/build/navivest_guidance': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/macho/navivest_ws/build/navivest_guidance/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/macho/navivest_ws/install/navivest_guidance/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/macho/navivest_ws/build/navivest_guidance/build --no-deps symlink_data
+[0.738s] running develop
+[0.837s] running egg_info
+[0.838s] creating navivest_guidance.egg-info
+[0.846s] writing navivest_guidance.egg-info/PKG-INFO
+[0.847s] writing dependency_links to navivest_guidance.egg-info/dependency_links.txt
+[0.847s] writing entry points to navivest_guidance.egg-info/entry_points.txt
+[0.847s] writing requirements to navivest_guidance.egg-info/requires.txt
+[0.847s] writing top-level names to navivest_guidance.egg-info/top_level.txt
+[0.847s] writing manifest file 'navivest_guidance.egg-info/SOURCES.txt'
+[0.867s] reading manifest file 'navivest_guidance.egg-info/SOURCES.txt'
+[0.867s] writing manifest file 'navivest_guidance.egg-info/SOURCES.txt'
+[0.906s] running build_ext
+[0.907s] Creating /home/macho/navivest_ws/install/navivest_guidance/lib/python3.12/site-packages/navivest-guidance.egg-link (link to .)
+[0.907s] Installing goal_to_plan script to /home/macho/navivest_ws/install/navivest_guidance/lib/navivest_guidance
+[0.907s] Installing scan_guardrails script to /home/macho/navivest_ws/install/navivest_guidance/lib/navivest_guidance
+[0.907s] Installing zed_topdown_astar script to /home/macho/navivest_ws/install/navivest_guidance/lib/navivest_guidance
+[0.907s] 
+[0.907s] Installed /home/macho/navivest_ws/build/navivest_guidance
+[0.907s] running symlink_data
+[0.907s] creating /home/macho/navivest_ws/install/navivest_guidance/share/ament_index
+[0.907s] creating /home/macho/navivest_ws/install/navivest_guidance/share/ament_index/resource_index
+[0.907s] creating /home/macho/navivest_ws/install/navivest_guidance/share/ament_index/resource_index/packages
+[0.907s] symbolically linking /home/macho/navivest_ws/build/navivest_guidance/resource/navivest_guidance -> /home/macho/navivest_ws/install/navivest_guidance/share/ament_index/resource_index/packages
+[0.907s] symbolically linking /home/macho/navivest_ws/build/navivest_guidance/package.xml -> /home/macho/navivest_ws/install/navivest_guidance/share/navivest_guidance
+[0.938s] Invoked command in '/home/macho/navivest_ws/build/navivest_guidance' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/macho/navivest_ws/build/navivest_guidance/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/macho/navivest_ws/install/navivest_guidance/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/macho/navivest_ws/build/navivest_guidance/build --no-deps symlink_data

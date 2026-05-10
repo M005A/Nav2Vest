@@ -1,0 +1,12 @@
+{
+  "package_name": "bond",
+  "output_dir": "/home/macho/navivest_ws/build/bond/rosidl_generator_type_description/bond",
+  "idl_tuples": [
+    "/home/macho/navivest_ws/build/bond/rosidl_adapter/bond:msg/Constants.idl",
+    "/home/macho/navivest_ws/build/bond/rosidl_adapter/bond:msg/Status.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

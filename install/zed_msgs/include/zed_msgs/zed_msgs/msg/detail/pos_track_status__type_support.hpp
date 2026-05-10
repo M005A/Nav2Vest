@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/build/zed_msgs/rosidl_generator_cpp/zed_msgs/msg/detail/pos_track_status__type_support.hpp

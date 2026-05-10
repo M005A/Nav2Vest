@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from robot_localization/srv/FromLLArray.srv
+// generated code does not contain a copyright notice
+
+#include "geographic_msgs/msg/GeoPoint.idl"
+#include "geometry_msgs/msg/Point.idl"
+
+module robot_localization {
+  module srv {
+    struct FromLLArray_Request {
+      sequence<geographic_msgs::msg::GeoPoint> ll_points;
+    };
+    struct FromLLArray_Response {
+      sequence<geometry_msgs::msg::Point> map_points;
+    };
+  };
+};

@@ -1,0 +1,19 @@
+[0.590s] Invoking command in '/home/macho/navivest_ws/build/navivest_guidance': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/macho/navivest_ws/build/navivest_guidance/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/macho/navivest_ws/install/navivest_guidance/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/macho/navivest_ws/build/navivest_guidance/build --no-deps symlink_data
+[0.797s] running develop
+[0.913s] running egg_info
+[0.923s] writing navivest_guidance.egg-info/PKG-INFO
+[0.923s] writing dependency_links to navivest_guidance.egg-info/dependency_links.txt
+[0.923s] writing entry points to navivest_guidance.egg-info/entry_points.txt
+[0.923s] writing requirements to navivest_guidance.egg-info/requires.txt
+[0.923s] writing top-level names to navivest_guidance.egg-info/top_level.txt
+[0.946s] reading manifest file 'navivest_guidance.egg-info/SOURCES.txt'
+[0.947s] writing manifest file 'navivest_guidance.egg-info/SOURCES.txt'
+[0.993s] running build_ext
+[0.993s] Creating /home/macho/navivest_ws/install/navivest_guidance/lib/python3.12/site-packages/navivest-guidance.egg-link (link to .)
+[0.993s] Installing goal_to_plan script to /home/macho/navivest_ws/install/navivest_guidance/lib/navivest_guidance
+[0.993s] Installing scan_guardrails script to /home/macho/navivest_ws/install/navivest_guidance/lib/navivest_guidance
+[0.993s] Installing zed_topdown_astar script to /home/macho/navivest_ws/install/navivest_guidance/lib/navivest_guidance
+[0.994s] 
+[0.994s] Installed /home/macho/navivest_ws/build/navivest_guidance
+[0.994s] running symlink_data
+[1.045s] Invoked command in '/home/macho/navivest_ws/build/navivest_guidance' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/macho/navivest_ws/build/navivest_guidance/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/macho/navivest_ws/install/navivest_guidance/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/macho/navivest_ws/build/navivest_guidance/build --no-deps symlink_data

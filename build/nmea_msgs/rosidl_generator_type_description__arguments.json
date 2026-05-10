@@ -1,0 +1,20 @@
+{
+  "package_name": "nmea_msgs",
+  "output_dir": "/home/macho/navivest_ws/build/nmea_msgs/rosidl_generator_type_description/nmea_msgs",
+  "idl_tuples": [
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Sentence.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgga.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgsa.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgst.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgsv.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/GpgsvSatellite.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gprmc.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpvtg.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpzda.idl",
+    "/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gphdt.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

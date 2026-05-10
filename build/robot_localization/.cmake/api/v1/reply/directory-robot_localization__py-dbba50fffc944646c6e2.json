@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "robot_localization__py",
+		"source" : "/home/macho/navivest_ws/build/robot_localization/robot_localization__py"
+	}
+}

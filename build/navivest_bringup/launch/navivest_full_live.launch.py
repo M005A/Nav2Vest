@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/src/navivest_bringup/launch/navivest_full_live.launch.py

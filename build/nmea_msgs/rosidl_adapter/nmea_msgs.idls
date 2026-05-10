@@ -1,0 +1,10 @@
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Sentence.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgga.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgsa.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgst.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpgsv.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/GpgsvSatellite.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gprmc.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpvtg.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gpzda.idl
+/home/macho/navivest_ws/build/nmea_msgs/rosidl_adapter/nmea_msgs:msg/Gphdt.idl

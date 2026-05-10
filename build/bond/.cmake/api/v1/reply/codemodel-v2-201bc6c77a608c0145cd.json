@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-803ace19837ae868a69e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "bond__py",
+					"jsonFile" : "directory-bond__py-0a442499b4ad6d6f48e9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/macho/navivest_ws/build/bond/bond__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "bond__rs",
+					"jsonFile" : "directory-bond__rs-cda4df9b18ad1b08b7ed.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/macho/navivest_ws/build/bond/bond__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "bond",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_bond_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_bond_egg-a747d194d1c924cc7a84.json",
+					"name" : "ament_cmake_python_build_bond_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_bond::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_bond-6f56a4fabb5e3ecba1b9.json",
+					"name" : "ament_cmake_python_symlink_bond",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond-f7f9df49b639523ec4df.json",
+					"name" : "bond",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__cpp-667ae31ba66731d92f6c.json",
+					"name" : "bond__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "bond__py::@c3b5d9091b07ac4812ff",
+					"jsonFile" : "target-bond__py-5979f4d9a636ba300c3a.json",
+					"name" : "bond__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_generator_c-7fbd026d587136f8d9bd.json",
+					"name" : "bond__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_generator_py-5a0776be36154653eabe.json",
+					"name" : "bond__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_generator_type_description-eef7bf31f3fcb5ed8f04.json",
+					"name" : "bond__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_typesupport_c-55f82725ec40b035033b.json",
+					"name" : "bond__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_typesupport_cpp-30c7f2822edc3036958c.json",
+					"name" : "bond__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_typesupport_fastrtps_c-67d072c5bd42aac33b61.json",
+					"name" : "bond__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_typesupport_fastrtps_cpp-619d151b709d67b0d468.json",
+					"name" : "bond__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_typesupport_introspection_c-69d05cd88312fcbc62cb.json",
+					"name" : "bond__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond__rosidl_typesupport_introspection_cpp-c1494e2de9e46e5d9cef.json",
+					"name" : "bond__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "bond__rs::@30b67a23ae27f6743c5e",
+					"jsonFile" : "target-bond__rs-d1b6b5c7f7c1cf7e9dde.json",
+					"name" : "bond__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond_s__rosidl_typesupport_c-19c3ca7b81d6cded53bd.json",
+					"name" : "bond_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond_s__rosidl_typesupport_fastrtps_c-5689d7cde4f9f8100e8f.json",
+					"name" : "bond_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond_s__rosidl_typesupport_introspection_c-9dc30bf6d40bd4243d9b.json",
+					"name" : "bond_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bond_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bond_uninstall-b6fb3a1d6f5aaaff1c54.json",
+					"name" : "bond_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-abdabe3310b099922fdb.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/macho/navivest_ws/build/bond",
+		"source" : "/home/macho/navivest_ws/src/bond_core/bond"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

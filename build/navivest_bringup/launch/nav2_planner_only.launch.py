@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/src/navivest_bringup/launch/nav2_planner_only.launch.py

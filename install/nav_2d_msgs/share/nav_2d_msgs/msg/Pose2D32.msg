@@ -1,0 +1,1 @@
+/home/macho/navivest_ws/src/navigation2_DISABLED/nav2_dwb_controller/nav_2d_msgs/msg/Pose2D32.msg

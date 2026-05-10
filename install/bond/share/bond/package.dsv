@@ -1,0 +1,10 @@
+source;share/bond/hook/cmake_prefix_path.dsv
+source;share/bond/hook/cmake_prefix_path.sh
+source;share/bond/hook/ld_library_path_lib.dsv
+source;share/bond/hook/ld_library_path_lib.sh
+source;share/bond/hook/pythonpath.dsv
+source;share/bond/hook/pythonpath.sh
+source;share/bond/local_setup.bash
+source;share/bond/local_setup.dsv
+source;share/bond/local_setup.sh
+source;share/bond/local_setup.zsh
