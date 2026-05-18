@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/nav2_msgs/rosidl_generator_c/nav2_msgs/action/detail/compute_and_track_route__struct.h

@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/src/zed-ros2-description/launch/zed_viz.launch.py

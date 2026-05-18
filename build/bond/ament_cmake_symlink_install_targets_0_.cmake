@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/macho/navivest_ws/build/bond/rosidl_generator_py/bond/bond_s__rosidl_typesupport_fastrtps_c.so" "TARGETS" "bond_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/bond")

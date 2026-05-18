@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/robot_localization/rosidl_generator_rs/robot_localization/rust/src/srv.rs

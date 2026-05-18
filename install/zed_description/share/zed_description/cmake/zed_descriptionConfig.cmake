@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/zed_description/ament_cmake_core/zed_descriptionConfig.cmake

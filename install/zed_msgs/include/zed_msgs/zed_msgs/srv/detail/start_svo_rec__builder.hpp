@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/zed_msgs/rosidl_generator_cpp/zed_msgs/srv/detail/start_svo_rec__builder.hpp

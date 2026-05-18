@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/macho/navivest_ws/build/robot_localization/rosidl_generator_py/robot_localization/robot_localization_s__rosidl_typesupport_fastrtps_c.so" "TARGETS" "robot_localization_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/robot_localization")

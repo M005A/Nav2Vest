@@ -25,6 +25,6 @@
             point_cloud_res: 'REDUCED'
             publish_point_cloud: true
         pos_tracking:
-            pos_tracking_enabled: false
+            pos_tracking_enabled: true
             imu_fusion: true
             floor_alignment: false

@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/nmea_msgs/ament_cmake_environment_hooks/pythonpath.sh

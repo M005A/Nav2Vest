@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/src/bond_core/bond/msg/Constants.msg

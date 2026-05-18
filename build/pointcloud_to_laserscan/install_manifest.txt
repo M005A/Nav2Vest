@@ -1,2 +1,0 @@
-/home/macho/navivest_ws/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so
-/home/macho/navivest_ws/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so

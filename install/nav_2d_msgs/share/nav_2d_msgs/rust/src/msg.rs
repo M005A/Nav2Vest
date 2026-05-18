@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/nav_2d_msgs/rosidl_generator_rs/nav_2d_msgs/rust/src/msg.rs

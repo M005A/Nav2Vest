@@ -47,6 +47,7 @@ def generate_launch_description():
                         'grid_forward_m': 5.0,
                         'resolution_m': 0.05,
                         'min_obstacle_height_m': 0.04,
+                        'obstacle_floor_clearance_m': 0.18,
                         'max_obstacle_height_m': 2.0,
                         'camera_floor_band_m': 0.12,
                         'inflation_radius_m': 0.30,

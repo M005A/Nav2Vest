@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/bond/rosidl_generator_rs/bond/rust/src/msg/rmw.rs

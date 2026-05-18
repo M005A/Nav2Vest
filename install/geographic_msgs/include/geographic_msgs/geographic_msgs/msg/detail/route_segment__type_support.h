@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/geographic_msgs/rosidl_generator_c/geographic_msgs/msg/detail/route_segment__type_support.h

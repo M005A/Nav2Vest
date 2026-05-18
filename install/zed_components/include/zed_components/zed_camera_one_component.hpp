@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/src/zed-ros2-wrapper/zed_components/src/zed_camera_one/include/zed_camera_one_component.hpp

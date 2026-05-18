@@ -1,3 +1,0 @@
-/home/macho/navivest_ws/install/bondcpp/lib/libbondcpp.so
-/home/macho/navivest_ws/install/bondcpp/share/bondcpp/cmake/bondcppExport.cmake
-/home/macho/navivest_ws/install/bondcpp/share/bondcpp/cmake/bondcppExport-noconfig.cmake

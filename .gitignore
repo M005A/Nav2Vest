@@ -43,3 +43,12 @@ src/nmea_msgs/
 src/pointcloud_to_laserscan/
 src/robot_localization/
 src/backward_ros/
+
+# ROS/colcon build artifacts
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc

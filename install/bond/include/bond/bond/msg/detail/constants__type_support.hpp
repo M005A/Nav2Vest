@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/bond/rosidl_generator_cpp/bond/msg/detail/constants__type_support.hpp

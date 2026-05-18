@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/geographic_msgs/rosidl_typesupport_introspection_c/geographic_msgs/srv/detail/get_geo_path__rosidl_typesupport_introspection_c.h

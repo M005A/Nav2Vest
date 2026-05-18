@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/src/bond_core/bondcpp/include/bondcpp/BondSM_sm.hpp

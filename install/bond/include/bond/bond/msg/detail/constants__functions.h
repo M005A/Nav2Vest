@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/bond/rosidl_generator_c/bond/msg/detail/constants__functions.h

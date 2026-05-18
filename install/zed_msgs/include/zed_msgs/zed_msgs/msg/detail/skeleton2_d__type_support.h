@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/zed_msgs/rosidl_generator_c/zed_msgs/msg/detail/skeleton2_d__type_support.h

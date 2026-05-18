@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/build/nav2_msgs/rosidl_generator_cpp/nav2_msgs/srv/detail/is_path_valid__type_support.hpp

@@ -1,1 +1,0 @@
-/home/macho/navivest_ws/src/navivest_bringup/launch/nav2_controller_only.launch.py
