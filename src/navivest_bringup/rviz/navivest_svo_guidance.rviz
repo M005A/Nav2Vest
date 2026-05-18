@@ -10,12 +10,12 @@ Panels:
         - /NaviVest Occupancy Grid1/Topic1
         - /NaviVest Occupancy Grid1/Update Topic1
         - /ZED Point Cloud1
+        - /ZED Point Cloud1/Topic1
         - /NaviVest Path1
         - /NaviVest Path1/Topic1
         - /NaviVest Path1/Offset1
         - /Camera Trajectory Points1
         - /Camera Trajectory Points1/Status1
-        - /Camera Trajectory Points1/Topic1
         - /Topdown Debug Image1
         - /Topdown Debug Image1/Topic1
         - /Image1/Topic1
@@ -121,7 +121,7 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz_default_plugins/PointCloud2
       Color: 120; 190; 255
-      Color Transformer: FlatColor
+      Color Transformer: RGB8
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -134,7 +134,7 @@ Visualization Manager:
       Selectable: false
       Size (Pixels): 2
       Size (m): 0.029999999329447746
-      Style: Points
+      Style: Tiles
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -233,7 +233,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -3.1650116443634033
+      Angle: -6.470088481903076
       Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -243,11 +243,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 72.36869812011719
+      Scale: 126.40901184082031
       Target Frame: odom
       Value: TopDownOrtho (rviz_default_plugins)
-      X: 2.195152997970581
-      Y: -5.137564182281494
+      X: 8.725804328918457
+      Y: 0.6223953366279602
     Saved: ~
 Window Geometry:
   Displays:

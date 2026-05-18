@@ -69,6 +69,12 @@ class ZedTopdownAStar(Node):
         self.declare_parameter("enable_pose_grid_memory", True)
         self.declare_parameter("memory_forward_grid_count", 3)
         self.declare_parameter("memory_lateral_grid_count", 3)
+        # Persistent obstacle memory for the rolling map. Large obstacle blobs
+        # should survive camera panning/temporary occlusion; tiny one-cell
+        # depth speckles should not be stored as real obstacles.
+        self.declare_parameter("memory_object_min_component_cells", 10)
+        self.declare_parameter("memory_obstacle_confirm_frames", 1)
+        self.declare_parameter("memory_free_clear_frames", 10)
         self.declare_parameter("replan_only_on_grid_exit", True)
         self.declare_parameter("replan_on_path_obstruction", True)
         self.declare_parameter("replan_heading_delta_rad", 0.45)
@@ -79,6 +85,11 @@ class ZedTopdownAStar(Node):
         self.declare_parameter("guidance_topic", "/navivest/guidance")
         self.declare_parameter("stop_path_distance_m", 0.35)
         self.declare_parameter("guidance_first_turn_lookahead_m", 1.10)
+        # Direction command is sampled at a fixed distance in front of the
+        # camera/person, instead of looking for the first turn anywhere in a
+        # long lookahead window. This makes guidance say LEFT/RIGHT based on
+        # where the path is at that near-field probe point.
+        self.declare_parameter("guidance_probe_distance_m", 1.10)
         self.declare_parameter("guidance_turn_lateral_threshold_m", 0.15)
         self.declare_parameter("guidance_ignore_near_m", 0.08)
         self.declare_parameter("guidance_debounce_frames", 4)
@@ -161,6 +172,11 @@ class ZedTopdownAStar(Node):
         self.memory_center_segment: Optional[Tuple[int, int]] = None
         self.rolling_planning_grid: Optional[np.ndarray] = None
         self.rolling_display_grid: Optional[np.ndarray] = None
+        # Per-cell evidence counters used by the rolling memory. These make
+        # large obstacles persistent while allowing repeated floor/free-space
+        # observations to eventually clear stale obstacles.
+        self.rolling_obstacle_hits: Optional[np.ndarray] = None
+        self.rolling_free_hits: Optional[np.ndarray] = None
         self.active_unit_segment: Optional[Tuple[int, int]] = None
         self.active_unit_origin_odom: Optional[np.ndarray] = None
         self.active_unit_forward_axis: Optional[np.ndarray] = None
@@ -821,6 +837,8 @@ class ZedTopdownAStar(Node):
         if self.rolling_planning_grid is None or self.rolling_planning_grid.shape != expected_shape:
             self.rolling_planning_grid = np.full(expected_shape, 255, dtype=np.uint8)
             self.rolling_display_grid = np.full(expected_shape, 255, dtype=np.uint8)
+            self.rolling_obstacle_hits = np.zeros(expected_shape, dtype=np.uint8)
+            self.rolling_free_hits = np.zeros(expected_shape, dtype=np.uint8)
             self.memory_center_segment = segment
             return True
 
@@ -836,6 +854,10 @@ class ZedTopdownAStar(Node):
         if abs(delta_forward) >= forward_count or abs(delta_lateral) >= lateral_count:
             self.rolling_planning_grid.fill(255)
             self.rolling_display_grid.fill(255)
+            if self.rolling_obstacle_hits is not None:
+                self.rolling_obstacle_hits.fill(0)
+            if self.rolling_free_hits is not None:
+                self.rolling_free_hits.fill(0)
         else:
             self.shift_memory(delta_forward, delta_lateral, rows, cols)
 
@@ -846,9 +868,11 @@ class ZedTopdownAStar(Node):
         row_shift = delta_forward * rows
         col_shift = delta_lateral * cols
 
-        for memory in (self.rolling_planning_grid, self.rolling_display_grid):
-            old = memory.copy()
-            memory.fill(255)
+        def shift_array(arr: Optional[np.ndarray], fill_value: int):
+            if arr is None:
+                return
+            old = arr.copy()
+            arr.fill(fill_value)
             src_r0 = max(0, row_shift)
             src_r1 = min(old.shape[0], old.shape[0] + row_shift)
             dst_r0 = max(0, -row_shift)
@@ -858,7 +882,12 @@ class ZedTopdownAStar(Node):
             dst_c0 = max(0, -col_shift)
             dst_c1 = dst_c0 + max(0, src_c1 - src_c0)
             if dst_r1 > dst_r0 and dst_c1 > dst_c0:
-                memory[dst_r0:dst_r1, dst_c0:dst_c1] = old[src_r0:src_r1, src_c0:src_c1]
+                arr[dst_r0:dst_r1, dst_c0:dst_c1] = old[src_r0:src_r1, src_c0:src_c1]
+
+        shift_array(self.rolling_planning_grid, 255)
+        shift_array(self.rolling_display_grid, 255)
+        shift_array(self.rolling_obstacle_hits, 0)
+        shift_array(self.rolling_free_hits, 0)
 
     def update_rolling_grids(self, planning_grid: np.ndarray, display_grid: np.ndarray, basis, origin, odom_tf) -> bool:
         segment = self.current_memory_segment_2d()
@@ -869,6 +898,66 @@ class ZedTopdownAStar(Node):
         self.insert_local_grid_into_memory(planning_grid, self.rolling_planning_grid, basis, origin, odom_tf)
         self.insert_local_grid_into_memory(display_grid, self.rolling_display_grid, basis, origin, odom_tf)
         return segment_changed
+
+    def large_obstacle_mask(self, local_grid: np.ndarray) -> np.ndarray:
+        """Return only obstacle blobs large enough to preserve in map memory.
+
+        This prevents isolated point-cloud speckles from becoming persistent
+        walls, while real chairs/people/walls/boxes remain in rolling memory
+        when the camera pans away.
+        """
+        obs = (local_grid == 100).astype(np.uint8)
+        min_cells = max(1, int(self.get_parameter("memory_object_min_component_cells").value))
+        if min_cells <= 1 or int(obs.sum()) == 0:
+            return obs.astype(bool)
+
+        num, labels, stats, _ = cv2.connectedComponentsWithStats(obs, connectivity=8)
+        keep = np.zeros_like(obs, dtype=bool)
+        for label in range(1, num):
+            if int(stats[label, cv2.CC_STAT_AREA]) >= min_cells:
+                keep[labels == label] = True
+        return keep
+
+    def write_cells_to_rolling_memory(self, rr: np.ndarray, cc: np.ndarray, vals: np.ndarray, memory_grid: np.ndarray):
+        if rr.size == 0:
+            return
+
+        if self.rolling_obstacle_hits is None or self.rolling_obstacle_hits.shape != memory_grid.shape:
+            self.rolling_obstacle_hits = np.zeros_like(memory_grid, dtype=np.uint8)
+        if self.rolling_free_hits is None or self.rolling_free_hits.shape != memory_grid.shape:
+            self.rolling_free_hits = np.zeros_like(memory_grid, dtype=np.uint8)
+
+        obstacle_confirm = max(1, int(self.get_parameter("memory_obstacle_confirm_frames").value))
+        free_clear = max(1, int(self.get_parameter("memory_free_clear_frames").value))
+
+        obs_idx = vals == 100
+        if np.any(obs_idx):
+            r_obs = rr[obs_idx]
+            c_obs = cc[obs_idx]
+            self.rolling_obstacle_hits[r_obs, c_obs] = np.minimum(
+                self.rolling_obstacle_hits[r_obs, c_obs].astype(np.uint16) + 1,
+                255,
+            ).astype(np.uint8)
+            self.rolling_free_hits[r_obs, c_obs] = 0
+            confirmed = self.rolling_obstacle_hits[r_obs, c_obs] >= obstacle_confirm
+            if np.any(confirmed):
+                memory_grid[r_obs[confirmed], c_obs[confirmed]] = 100
+
+        free_idx = vals == 0
+        if np.any(free_idx):
+            r_free = rr[free_idx]
+            c_free = cc[free_idx]
+            self.rolling_free_hits[r_free, c_free] = np.minimum(
+                self.rolling_free_hits[r_free, c_free].astype(np.uint16) + 1,
+                255,
+            ).astype(np.uint8)
+
+            currently_obstacle = memory_grid[r_free, c_free] == 100
+            clear_confirmed = self.rolling_free_hits[r_free, c_free] >= free_clear
+            clearable = (~currently_obstacle) | clear_confirmed
+            if np.any(clearable):
+                memory_grid[r_free[clearable], c_free[clearable]] = 0
+                self.rolling_obstacle_hits[r_free[clearable], c_free[clearable]] = 0
 
     def insert_local_grid_into_memory(self, local_grid: np.ndarray, memory_grid: Optional[np.ndarray], basis, origin, odom_tf):
         if (
@@ -920,11 +1009,34 @@ class ZedTopdownAStar(Node):
         if not np.any(valid):
             return
 
-        vals = local_grid[observed[valid, 0], observed[valid, 1]]
-        rr = mem_rows[valid]
-        cc = mem_cols[valid]
-        memory_grid[rr[vals == 0], cc[vals == 0]] = 0
-        memory_grid[rr[vals == 100], cc[vals == 100]] = 100
+        vals = local_grid[observed[valid, 0], observed[valid, 1]].copy()
+        # Only persist sizeable obstacle blobs into the rolling memory. This
+        # keeps depth speckles from becoming permanent obstacles, but preserves
+        # real objects when the user pans away and they become temporarily
+        # unobserved.
+        large_obs = self.large_obstacle_mask(local_grid)
+        # vals is already filtered to only the valid observed cells, so any
+        # mask applied to vals must have the exact same 1-D length. The previous
+        # version mixed the full valid-cell mask with an obstacle-only array,
+        # which caused NumPy broadcast crashes like shapes (5433,) vs (890,).
+        observed_valid = observed[valid]
+        is_obstacle_val = vals == 100
+        if np.any(is_obstacle_val):
+            obstacle_positions = np.flatnonzero(is_obstacle_val)
+            obs_rows = observed_valid[obstacle_positions, 0]
+            obs_cols = observed_valid[obstacle_positions, 1]
+            keep_obstacle = large_obs[obs_rows, obs_cols]
+            drop_positions = obstacle_positions[~keep_obstacle]
+            if drop_positions.size > 0:
+                vals[drop_positions] = 255
+
+        keep = vals != 255
+        if not np.any(keep):
+            return
+
+        rr = mem_rows[valid][keep]
+        cc = mem_cols[valid][keep]
+        self.write_cells_to_rolling_memory(rr, cc, vals[keep], memory_grid)
 
     def camera_grid_from_memory(self) -> Optional[np.ndarray]:
         if (
@@ -1512,7 +1624,7 @@ class ZedTopdownAStar(Node):
 
         resolution = float(self.get_parameter("resolution_m").value)
         start_row, start_col = path_cells[0]
-        rows_m = np.array(
+        forward_m = np.array(
             [(row - start_row) * resolution for row, _ in path_cells],
             dtype=np.float32,
         )
@@ -1521,26 +1633,7 @@ class ZedTopdownAStar(Node):
             dtype=np.float32,
         )
 
-        forward_gain = float(np.max(rows_m)) if rows_m.size else 0.0
-        stop_distance = float(self.get_parameter("stop_path_distance_m").value)
-        if forward_gain < stop_distance:
-            return "STOP!"
-
-        lookahead = float(self.get_parameter("guidance_first_turn_lookahead_m").value)
-        turn_threshold = float(self.get_parameter("guidance_turn_lateral_threshold_m").value)
-        ignore_near = float(self.get_parameter("guidance_ignore_near_m").value)
-
-        actionable = np.flatnonzero(
-            (rows_m >= ignore_near)
-            & (rows_m <= lookahead)
-            & (np.abs(lateral_m) >= turn_threshold)
-        )
-        if actionable.size == 0:
-            return "FORWARD"
-
-        first_idx = int(actionable[0])
-        first_delta = float(lateral_m[first_idx])
-        return self.guidance_side(first_delta)
+        return self.classify_probe_guidance(forward_m, lateral_m)
 
     def classify_world_guidance(self) -> str:
         if (
@@ -1551,32 +1644,61 @@ class ZedTopdownAStar(Node):
         ):
             return "STOP!"
 
-        # Evaluate guidance in the frozen active-unit frame. Using the live
-        # camera heading here made a good fixed path look like it was behind the
-        # camera whenever the user rotated slightly, causing false STOP.
+        # Direction is determined at a fixed probe distance in front of the
+        # camera/person. The path is still expressed in the frozen active-unit
+        # frame, but the command now asks: "where is the path at 0.25 m ahead
+        # of me?" rather than searching the first turn in a long lookahead.
         guide_forward = self.active_unit_forward_axis if self.active_unit_forward_axis is not None else self.current_forward_axis
         guide_right = self.active_unit_right_axis if self.active_unit_right_axis is not None else self.current_right_axis
         rel = np.array(self.active_path_world, dtype=np.float32) - self.current_floor_origin_odom
         forward_m = rel @ guide_forward
         lateral_m = rel @ guide_right
 
-        stop_distance = float(self.get_parameter("stop_path_distance_m").value)
-        if forward_m.size == 0 or float(np.max(forward_m)) < stop_distance:
+        return self.classify_probe_guidance(forward_m, lateral_m)
+
+    def classify_probe_guidance(self, forward_m: np.ndarray, lateral_m: np.ndarray) -> str:
+        """Return guidance from the path position at a fixed distance ahead.
+
+        This intentionally avoids the old behavior of scanning a long lookahead
+        window and triggering on the first lateral deviation. For wearable
+        guidance, the command should be based on the near-field path direction:
+        sample approximately guidance_probe_distance_m in front of the camera,
+        then decide LEFT/RIGHT/FORWARD from that path point's lateral offset.
+        """
+        if forward_m.size == 0 or lateral_m.size == 0:
             return "STOP!"
 
-        lookahead = float(self.get_parameter("guidance_first_turn_lookahead_m").value)
-        turn_threshold = float(self.get_parameter("guidance_turn_lateral_threshold_m").value)
-        ignore_near = float(self.get_parameter("guidance_ignore_near_m").value)
-        actionable = np.flatnonzero(
-            (forward_m >= ignore_near)
-            & (forward_m <= lookahead)
-            & (np.abs(lateral_m) >= turn_threshold)
-        )
-        if actionable.size == 0:
-            return "FORWARD"
+        valid = np.isfinite(forward_m) & np.isfinite(lateral_m) & (forward_m >= 0.0)
+        if not np.any(valid):
+            return "STOP!"
 
-        nearest_idx = int(actionable[np.argmin(forward_m[actionable])])
-        return self.guidance_side(float(lateral_m[nearest_idx]))
+        fwd = forward_m[valid].astype(np.float32)
+        lat = lateral_m[valid].astype(np.float32)
+
+        stop_distance = float(self.get_parameter("stop_path_distance_m").value)
+        max_forward = float(np.max(fwd)) if fwd.size else 0.0
+        if max_forward < stop_distance:
+            return "STOP!"
+
+        probe_distance = max(
+            0.0,
+            float(self.get_parameter("guidance_probe_distance_m").value),
+        )
+        turn_threshold = float(self.get_parameter("guidance_turn_lateral_threshold_m").value)
+
+        # Clamp the probe to the existing path. If the path is shorter than the
+        # requested probe distance but still longer than stop_distance, use the
+        # farthest/nearest available point instead of incorrectly stopping.
+        probe = min(probe_distance, max_forward)
+
+        # Use the path point closest to the probe distance. This is robust with
+        # decimated paths and non-perfectly-monotonic A* output.
+        idx = int(np.argmin(np.abs(fwd - probe)))
+        lateral_at_probe = float(lat[idx])
+
+        if abs(lateral_at_probe) < turn_threshold:
+            return "FORWARD"
+        return self.guidance_side(lateral_at_probe)
 
     def guidance_side(self, lateral_delta_m: float) -> str:
         delta = lateral_delta_m
