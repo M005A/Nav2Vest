@@ -17,6 +17,9 @@ def launch_setup(context, *args, **kwargs):
     svo_name = LaunchConfiguration('svo_name').perform(context)
     camera_model = LaunchConfiguration('camera_model')
     rviz = LaunchConfiguration('rviz')
+    audio = LaunchConfiguration('audio')
+    audio_voice_cmd = LaunchConfiguration('audio_voice_cmd')
+    audio_min_repeat_s = float(LaunchConfiguration('audio_min_repeat_s').perform(context))
     guidance_start_m = float(LaunchConfiguration('guidance_start_m').perform(context))
 
     if not svo_path and svo_file:
@@ -116,7 +119,12 @@ def launch_setup(context, *args, **kwargs):
                 'replan_heading_delta_rad': 0.45,
                 'unit_goal_reached_m': 0.35,
                 'guidance_topic': '/navivest/guidance',
+                'audio_cue_topic': '/navivest/audio_cue',
                 'stop_path_distance_m': 0.35,
+                'audio_path_check_step_m': 0.10,
+                'audio_upcoming_turn_min_distance_m': 0.25,
+                'audio_upcoming_turn_max_distance_m': 0.75,
+                'audio_direction_change_lateral_threshold_m': 0.12,
                 'guidance_first_turn_lookahead_m': 1.10,
                 'guidance_turn_lateral_threshold_m': 0.15,
                 'guidance_ignore_near_m': 0.08,
@@ -136,6 +144,19 @@ def launch_setup(context, *args, **kwargs):
                 'path_stride_cells': 4,
                 'stats_period_s': 2.0,
             }]
+        ),
+
+        Node(
+            package='navivest_guidance',
+            executable='guidance_audio',
+            name='guidance_audio',
+            output='screen',
+            parameters=[{
+                'topic': '/navivest/audio_cue',
+                'voice_cmd': audio_voice_cmd,
+                'min_repeat_s': audio_min_repeat_s,
+            }],
+            condition=IfCondition(audio),
         ),
 
         Node(
@@ -185,6 +206,21 @@ def generate_launch_description():
             'camera_model',
             default_value='zed2i',
             description='ZED camera model for the recording; use zed for older .svo recordings'
+        ),
+        DeclareLaunchArgument(
+            'audio',
+            default_value='true',
+            description='Speak NaviVest audio cues from /navivest/audio_cue'
+        ),
+        DeclareLaunchArgument(
+            'audio_voice_cmd',
+            default_value='spd-say',
+            description='Speech command used by guidance_audio; use espeak if speech-dispatcher is unavailable'
+        ),
+        DeclareLaunchArgument(
+            'audio_min_repeat_s',
+            default_value='1.5',
+            description='Minimum seconds before repeating the same spoken cue'
         ),
         DeclareLaunchArgument(
             'rviz',

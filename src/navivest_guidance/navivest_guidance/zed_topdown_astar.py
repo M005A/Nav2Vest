@@ -83,13 +83,16 @@ class ZedTopdownAStar(Node):
         self.declare_parameter("unit_goal_reached_m", 0.35)
 
         self.declare_parameter("guidance_topic", "/navivest/guidance")
+        self.declare_parameter("audio_cue_topic", "/navivest/audio_cue")
         self.declare_parameter("stop_path_distance_m", 0.35)
+        # Audio cue guardrails. The simple /navivest/guidance topic stays
+        # immediate for haptics; /navivest/audio_cue can announce one upcoming
+        # turn without spamming old path changes.
+        self.declare_parameter("audio_path_check_step_m", 0.10)
+        self.declare_parameter("audio_upcoming_turn_min_distance_m", 0.25)
+        self.declare_parameter("audio_upcoming_turn_max_distance_m", 0.75)
+        self.declare_parameter("audio_direction_change_lateral_threshold_m", 0.12)
         self.declare_parameter("guidance_first_turn_lookahead_m", 1.10)
-        # Direction command is sampled at a fixed distance in front of the
-        # camera/person, instead of looking for the first turn anywhere in a
-        # long lookahead window. This makes guidance say LEFT/RIGHT based on
-        # where the path is at that near-field probe point.
-        self.declare_parameter("guidance_probe_distance_m", 1.10)
         self.declare_parameter("guidance_turn_lateral_threshold_m", 0.15)
         self.declare_parameter("guidance_ignore_near_m", 0.08)
         self.declare_parameter("guidance_debounce_frames", 4)
@@ -139,6 +142,11 @@ class ZedTopdownAStar(Node):
             str(self.get_parameter("guidance_topic").value),
             10,
         )
+        self.audio_cue_pub = self.create_publisher(
+            String,
+            str(self.get_parameter("audio_cue_topic").value),
+            10,
+        )
         self.camera_trail_pub = self.create_publisher(
             Marker,
             str(self.get_parameter("camera_trail_topic").value),
@@ -157,6 +165,7 @@ class ZedTopdownAStar(Node):
         self.pending_guidance_text = ""
         self.pending_guidance_count = 0
         self.last_guidance_log = 0.0
+        self.last_audio_cue_text = ""
         self.frame_count = 0
         self.pose_xyyaw: Optional[Tuple[float, float, float]] = None
         self.memory_origin_xyyaw: Optional[Tuple[float, float, float]] = None
@@ -1624,7 +1633,7 @@ class ZedTopdownAStar(Node):
 
         resolution = float(self.get_parameter("resolution_m").value)
         start_row, start_col = path_cells[0]
-        forward_m = np.array(
+        rows_m = np.array(
             [(row - start_row) * resolution for row, _ in path_cells],
             dtype=np.float32,
         )
@@ -1633,7 +1642,26 @@ class ZedTopdownAStar(Node):
             dtype=np.float32,
         )
 
-        return self.classify_probe_guidance(forward_m, lateral_m)
+        forward_gain = float(np.max(rows_m)) if rows_m.size else 0.0
+        stop_distance = float(self.get_parameter("stop_path_distance_m").value)
+        if forward_gain < stop_distance:
+            return "STOP!"
+
+        lookahead = float(self.get_parameter("guidance_first_turn_lookahead_m").value)
+        turn_threshold = float(self.get_parameter("guidance_turn_lateral_threshold_m").value)
+        ignore_near = float(self.get_parameter("guidance_ignore_near_m").value)
+
+        actionable = np.flatnonzero(
+            (rows_m >= ignore_near)
+            & (rows_m <= lookahead)
+            & (np.abs(lateral_m) >= turn_threshold)
+        )
+        if actionable.size == 0:
+            return "FORWARD"
+
+        first_idx = int(actionable[0])
+        first_delta = float(lateral_m[first_idx])
+        return self.guidance_side(first_delta)
 
     def classify_world_guidance(self) -> str:
         if (
@@ -1644,61 +1672,32 @@ class ZedTopdownAStar(Node):
         ):
             return "STOP!"
 
-        # Direction is determined at a fixed probe distance in front of the
-        # camera/person. The path is still expressed in the frozen active-unit
-        # frame, but the command now asks: "where is the path at 0.25 m ahead
-        # of me?" rather than searching the first turn in a long lookahead.
+        # Evaluate guidance in the frozen active-unit frame. Using the live
+        # camera heading here made a good fixed path look like it was behind the
+        # camera whenever the user rotated slightly, causing false STOP.
         guide_forward = self.active_unit_forward_axis if self.active_unit_forward_axis is not None else self.current_forward_axis
         guide_right = self.active_unit_right_axis if self.active_unit_right_axis is not None else self.current_right_axis
         rel = np.array(self.active_path_world, dtype=np.float32) - self.current_floor_origin_odom
         forward_m = rel @ guide_forward
         lateral_m = rel @ guide_right
 
-        return self.classify_probe_guidance(forward_m, lateral_m)
-
-    def classify_probe_guidance(self, forward_m: np.ndarray, lateral_m: np.ndarray) -> str:
-        """Return guidance from the path position at a fixed distance ahead.
-
-        This intentionally avoids the old behavior of scanning a long lookahead
-        window and triggering on the first lateral deviation. For wearable
-        guidance, the command should be based on the near-field path direction:
-        sample approximately guidance_probe_distance_m in front of the camera,
-        then decide LEFT/RIGHT/FORWARD from that path point's lateral offset.
-        """
-        if forward_m.size == 0 or lateral_m.size == 0:
-            return "STOP!"
-
-        valid = np.isfinite(forward_m) & np.isfinite(lateral_m) & (forward_m >= 0.0)
-        if not np.any(valid):
-            return "STOP!"
-
-        fwd = forward_m[valid].astype(np.float32)
-        lat = lateral_m[valid].astype(np.float32)
-
         stop_distance = float(self.get_parameter("stop_path_distance_m").value)
-        max_forward = float(np.max(fwd)) if fwd.size else 0.0
-        if max_forward < stop_distance:
+        if forward_m.size == 0 or float(np.max(forward_m)) < stop_distance:
             return "STOP!"
 
-        probe_distance = max(
-            0.0,
-            float(self.get_parameter("guidance_probe_distance_m").value),
-        )
+        lookahead = float(self.get_parameter("guidance_first_turn_lookahead_m").value)
         turn_threshold = float(self.get_parameter("guidance_turn_lateral_threshold_m").value)
-
-        # Clamp the probe to the existing path. If the path is shorter than the
-        # requested probe distance but still longer than stop_distance, use the
-        # farthest/nearest available point instead of incorrectly stopping.
-        probe = min(probe_distance, max_forward)
-
-        # Use the path point closest to the probe distance. This is robust with
-        # decimated paths and non-perfectly-monotonic A* output.
-        idx = int(np.argmin(np.abs(fwd - probe)))
-        lateral_at_probe = float(lat[idx])
-
-        if abs(lateral_at_probe) < turn_threshold:
+        ignore_near = float(self.get_parameter("guidance_ignore_near_m").value)
+        actionable = np.flatnonzero(
+            (forward_m >= ignore_near)
+            & (forward_m <= lookahead)
+            & (np.abs(lateral_m) >= turn_threshold)
+        )
+        if actionable.size == 0:
             return "FORWARD"
-        return self.guidance_side(lateral_at_probe)
+
+        nearest_idx = int(actionable[np.argmin(forward_m[actionable])])
+        return self.guidance_side(float(lateral_m[nearest_idx]))
 
     def guidance_side(self, lateral_delta_m: float) -> str:
         delta = lateral_delta_m
@@ -1716,12 +1715,112 @@ class ZedTopdownAStar(Node):
         msg.data = text
         self.guidance_pub.publish(msg)
 
+        audio_text = self.build_audio_cue(text)
+        if audio_text:
+            audio_msg = String()
+            audio_msg.data = audio_text
+            self.audio_cue_pub.publish(audio_msg)
+
         now = time.time()
         period = float(self.get_parameter("guidance_log_period_s").value)
         if text != self.last_guidance_text or (period > 0.0 and now - self.last_guidance_log >= period):
-            self.get_logger().info(f"guidance: {text}")
+            if audio_text and audio_text != text:
+                self.get_logger().info(f"guidance: {text} audio: {audio_text}")
+            else:
+                self.get_logger().info(f"guidance: {text}")
             self.last_guidance_text = text
             self.last_guidance_log = now
+
+    def build_audio_cue(self, immediate_text: str) -> str:
+        """Return one guarded speech phrase for the audio node.
+
+        /navivest/guidance remains the simple immediate command. Audio adds one
+        upcoming turn cue by probing the fixed path every 0.10 m. This avoids
+        stacking many future commands and keeps the haptic/simple topic stable.
+        """
+        if immediate_text in ("STOP!", "STOP", "WAIT"):
+            return "Wait"
+
+        upcoming = self.find_earliest_upcoming_turn(immediate_text)
+        if upcoming is not None:
+            direction, distance_m = upcoming
+            return f"{direction.title()} in {distance_m:.1f} meters"
+
+        if immediate_text == "FORWARD":
+            return "Forward"
+        if immediate_text in ("LEFT", "RIGHT"):
+            return immediate_text.title()
+        return ""
+
+    def find_earliest_upcoming_turn(self, immediate_text: str):
+        if not self.active_path_world or self.current_floor_origin_odom is None:
+            return None
+
+        guide_forward = self.active_unit_forward_axis if self.active_unit_forward_axis is not None else self.current_forward_axis
+        guide_right = self.active_unit_right_axis if self.active_unit_right_axis is not None else self.current_right_axis
+        if guide_forward is None or guide_right is None:
+            return None
+
+        path = np.array(self.active_path_world, dtype=np.float32)
+        if path.ndim != 2 or path.shape[0] < 2:
+            return None
+
+        rel = path - self.current_floor_origin_odom
+        forward_m = rel @ guide_forward
+        lateral_m = rel @ guide_right
+
+        order = np.argsort(forward_m)
+        forward_m = forward_m[order]
+        lateral_m = lateral_m[order]
+
+        # Keep only points in front of the camera and collapse duplicate forward
+        # samples so interpolation stays stable.
+        valid = forward_m >= 0.0
+        forward_m = forward_m[valid]
+        lateral_m = lateral_m[valid]
+        if forward_m.size < 2:
+            return None
+
+        uniq_forward = []
+        uniq_lateral = []
+        last_f = None
+        for f, l in zip(forward_m, lateral_m):
+            f = float(f)
+            l = float(l)
+            if last_f is None or abs(f - last_f) > 1e-3:
+                uniq_forward.append(f)
+                uniq_lateral.append(l)
+                last_f = f
+            else:
+                # Average duplicates at the same progress distance.
+                uniq_lateral[-1] = 0.5 * (uniq_lateral[-1] + l)
+        forward_m = np.asarray(uniq_forward, dtype=np.float32)
+        lateral_m = np.asarray(uniq_lateral, dtype=np.float32)
+        if forward_m.size < 2:
+            return None
+
+        step = max(0.02, float(self.get_parameter("audio_path_check_step_m").value))
+        min_d = max(0.0, float(self.get_parameter("audio_upcoming_turn_min_distance_m").value))
+        max_d = max(min_d, float(self.get_parameter("audio_upcoming_turn_max_distance_m").value))
+        threshold = max(0.01, float(self.get_parameter("audio_direction_change_lateral_threshold_m").value))
+        max_d = min(max_d, float(forward_m[-1]))
+        if max_d < min_d:
+            return None
+
+        baseline = immediate_text
+        if baseline not in ("FORWARD", "LEFT", "RIGHT"):
+            baseline = "FORWARD"
+
+        checks = np.arange(min_d, max_d + step * 0.5, step, dtype=np.float32)
+        for d in checks:
+            lat = float(np.interp(float(d), forward_m, lateral_m))
+            cmd = self.guidance_side(lat) if abs(lat) >= threshold else "FORWARD"
+            # Announce the earliest meaningful side change. Avoid saying
+            # "Forward in X meters" because it adds clutter without much value.
+            if cmd in ("LEFT", "RIGHT") and cmd != baseline:
+                return cmd, float(d)
+        return None
+    
 
     def stabilize_guidance(self, text: str) -> str:
         if not self.last_guidance_text:

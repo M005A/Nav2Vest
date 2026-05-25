@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             'goal_to_plan = navivest_guidance.goal_to_plan:main',
             'zed_topdown_astar = navivest_guidance.zed_topdown_astar:main',
+            'guidance_audio = navivest_guidance.guidance_audio:main',
             'scan_guardrails = navivest_guidance.scan_guardrails:main',
         ],
     },

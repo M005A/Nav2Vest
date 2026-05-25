@@ -6,7 +6,6 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /NaviVest Occupancy Grid1
         - /NaviVest Occupancy Grid1/Topic1
         - /NaviVest Occupancy Grid1/Update Topic1
         - /ZED Point Cloud1
@@ -15,17 +14,24 @@ Panels:
         - /NaviVest Path1/Topic1
         - /NaviVest Path1/Offset1
         - /Camera Trajectory Points1
-        - /Camera Trajectory Points1/Status1
         - /Topdown Debug Image1
         - /Topdown Debug Image1/Topic1
         - /Image1/Topic1
       Splitter Ratio: 0.5
-    Tree Height: 717
+    Tree Height: 406
   - Class: rviz_common/Views
     Expanded:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /ZED Point Cloud1
+      Splitter Ratio: 0.5
+    Tree Height: 276
 Visualization Manager:
   Class: ""
   Displays:
@@ -114,14 +120,14 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
+        Max Value: 1.5046391487121582
+        Min Value: -0.7771034240722656
         Value: true
       Axis: Z
       Channel Name: intensity
       Class: rviz_default_plugins/PointCloud2
       Color: 120; 190; 255
-      Color Transformer: RGB8
+      Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -233,7 +239,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -6.470088481903076
+      Angle: -1.6200652122497559
       Class: rviz_default_plugins/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -243,25 +249,25 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 126.40901184082031
+      Scale: 161.17300415039062
       Target Frame: odom
       Value: TopDownOrtho (rviz_default_plugins)
-      X: 8.725804328918457
-      Y: 0.6223953366279602
+      X: 3.5066661834716797
+      Y: -0.5226098895072937
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1403
+  Height: 1662
   Hide Left Dock: false
   Hide Right Dock: false
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000005060000051dfc0200000004fb000000100044006900730070006c006100790073010000003f0000030d000000cc00fffffffb000000260054006f00700064006f0077006e00200044006500620075006700200049006d0061006700650000000311000000660000001700fffffffb0000000a00560069006500770073010000035200000111000000a900fffffffb0000000a0049006d0061006700650100000469000000f30000001700ffffff000008640000051d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000004f8000005defc0200000005fb000000100044006900730070006c0061007900730000000070000001860000018600fffffffb000000260054006f00700064006f0077006e00200044006500620075006700200049006d0061006700650000000311000000660000002800fffffffb0000000a0056006900650077007300000003c30000017a0000013800fffffffb0000000a0049006d00610067006501000000700000044c0000002800fffffffb000000100044006900730070006c00610079007301000004c8000001860000018600ffffff0000063c000005de00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Topdown Debug Image:
     collapsed: false
   Views:
     collapsed: false
-  Width: 3440
+  Width: 2880
   X: 0
-  Y: 0
+  Y: 64
