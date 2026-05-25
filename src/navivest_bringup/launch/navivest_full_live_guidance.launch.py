@@ -14,7 +14,7 @@ from ament_index_python.packages import get_package_share_directory
 LIVE_CAMERA_INDEX = "-1"
 SERIAL_NUMBER = "0"
 CAMERA_RESOLUTION = "HD720"
-CAMERA_FPS = 60
+CAMERA_FPS = 30
 DEPTH_MODE = "NEURAL_LIGHT"
 
 
@@ -100,7 +100,7 @@ def launch_setup(context, *args, **kwargs):
                 'path_switch_min_gain_m': 0.55,
                 'reroute_min_forward_gain_m': 0.75,
                 'prepend_camera_anchor': True,
-                'enable_pose_grid_memory': True,
+                'enable_pose_grid_memory': False,
                 'memory_forward_grid_count': 3,
                 'memory_lateral_grid_count': 3,
                 'replan_only_on_grid_exit': False,
