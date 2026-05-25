@@ -100,7 +100,7 @@ def launch_setup(context, *args, **kwargs):
                 'path_switch_min_gain_m': 0.55,
                 'reroute_min_forward_gain_m': 0.75,
                 'prepend_camera_anchor': True,
-                'enable_pose_grid_memory': False,
+                'enable_pose_grid_memory': True,
                 'memory_forward_grid_count': 3,
                 'memory_lateral_grid_count': 3,
                 'replan_only_on_grid_exit': False,
