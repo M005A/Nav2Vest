@@ -67,6 +67,7 @@ class ZedTopdownAStar(Node):
         self.declare_parameter("reroute_min_forward_gain_m", 0.75)
         self.declare_parameter("prepend_camera_anchor", True)
         self.declare_parameter("enable_pose_grid_memory", True)
+        self.declare_parameter("enable_rolling_grid_memory", True)
         self.declare_parameter("memory_forward_grid_count", 3)
         self.declare_parameter("memory_lateral_grid_count", 3)
         # Persistent obstacle memory for the rolling map. Large obstacle blobs
@@ -103,6 +104,7 @@ class ZedTopdownAStar(Node):
         # Persistent RViz trail of where the camera/person has been.
         # This is published as one growing SPHERE_LIST marker, so points are
         # never deleted during the run.
+        self.declare_parameter("publish_camera_trail", True)
         self.declare_parameter("camera_trail_topic", "/navivest/camera_trajectory")
         self.declare_parameter("camera_trail_min_distance_m", 0.05)
         self.declare_parameter("camera_trail_point_diameter_m", 0.075)
@@ -238,7 +240,8 @@ class ZedTopdownAStar(Node):
             segment_changed = False
             if pose_mode:
                 self.update_floor_odom_state(basis, origin, odom_tf)
-                self.update_camera_trail(msg.header.stamp)
+                if bool(self.get_parameter("publish_camera_trail").value):
+                    self.update_camera_trail(msg.header.stamp)
                 segment_changed = self.update_rolling_grids(planning_grid, display_grid, basis, origin, odom_tf)
                 unit_changed = self.update_active_unit()
                 segment_changed = segment_changed or unit_changed
@@ -274,6 +277,9 @@ class ZedTopdownAStar(Node):
         when the camera moves by camera_trail_min_distance_m, and old points are
         intentionally never deleted.
         """
+        if not bool(self.get_parameter("publish_camera_trail").value):
+            return
+
         point = self.current_floor_origin_odom
         if point is None:
             point = self.current_camera_origin_odom
@@ -904,6 +910,16 @@ class ZedTopdownAStar(Node):
             return False
 
         segment_changed = self.ensure_rolling_memory(segment, planning_grid.shape)
+        if not bool(self.get_parameter("enable_rolling_grid_memory").value):
+            if self.rolling_planning_grid is not None:
+                self.rolling_planning_grid.fill(255)
+            if self.rolling_display_grid is not None:
+                self.rolling_display_grid.fill(255)
+            if self.rolling_obstacle_hits is not None:
+                self.rolling_obstacle_hits.fill(0)
+            if self.rolling_free_hits is not None:
+                self.rolling_free_hits.fill(0)
+
         self.insert_local_grid_into_memory(planning_grid, self.rolling_planning_grid, basis, origin, odom_tf)
         self.insert_local_grid_into_memory(display_grid, self.rolling_display_grid, basis, origin, odom_tf)
         return segment_changed
