@@ -12,7 +12,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 
-HAPTICS_HOST = "10.0.0.50"
+HAPTICS_HOST = "192.168.55.2"
 HAPTICS_PORT = 5000
 HAPTICS_ENABLED = True
 HAPTICS_TIMEOUT_S = 0.3
