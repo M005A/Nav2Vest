@@ -93,6 +93,16 @@ class ZedTopdownAStar(Node):
         self.declare_parameter("audio_upcoming_turn_min_distance_m", 0.25)
         self.declare_parameter("audio_upcoming_turn_max_distance_m", 0.75)
         self.declare_parameter("audio_direction_change_lateral_threshold_m", 0.12)
+        self.declare_parameter("audio_min_interval_s", 1.2)
+        self.declare_parameter("audio_forward_repeat_interval_s", 4.0)
+        self.declare_parameter("audio_turn_repeat_interval_s", 2.0)
+        self.declare_parameter("audio_stop_repeat_interval_s", 1.0)
+        self.declare_parameter("audio_now_distance_m", 0.30)
+        self.declare_parameter("audio_path_clear_enabled", True)
+        self.declare_parameter("audio_distance_round_m", 0.1)
+        self.declare_parameter("audio_bear_lateral_threshold_m", 0.15)
+        self.declare_parameter("audio_debug_suppression", False)
+        self.declare_parameter("guidance_lookahead_m", 1.50)
         self.declare_parameter("guidance_first_turn_lookahead_m", 1.10)
         self.declare_parameter("guidance_turn_lateral_threshold_m", 0.15)
         self.declare_parameter("guidance_ignore_near_m", 0.08)
@@ -168,6 +178,10 @@ class ZedTopdownAStar(Node):
         self.pending_guidance_count = 0
         self.last_guidance_log = 0.0
         self.last_audio_cue_text = ""
+        self.last_audio_publish_time = 0.0
+        self.last_audio_was_stop = False
+        self.pending_audio_reason = ""
+        self.latest_path_cells_for_audio = []
         self.frame_count = 0
         self.pose_xyyaw: Optional[Tuple[float, float, float]] = None
         self.memory_origin_xyyaw: Optional[Tuple[float, float, float]] = None
@@ -253,6 +267,7 @@ class ZedTopdownAStar(Node):
                 candidate_path = self.plan_path(planning_grid)
                 path_cells = self.stabilize_path(candidate_path, planning_grid)
                 guidance = self.classify_guidance(path_cells)
+            self.latest_path_cells_for_audio = list(path_cells) if path_cells else []
 
             if pose_mode and self.rolling_display_grid is not None:
                 self.publish_rolling_grid(msg)
@@ -1663,21 +1678,7 @@ class ZedTopdownAStar(Node):
         if forward_gain < stop_distance:
             return "STOP!"
 
-        lookahead = float(self.get_parameter("guidance_first_turn_lookahead_m").value)
-        turn_threshold = float(self.get_parameter("guidance_turn_lateral_threshold_m").value)
-        ignore_near = float(self.get_parameter("guidance_ignore_near_m").value)
-
-        actionable = np.flatnonzero(
-            (rows_m >= ignore_near)
-            & (rows_m <= lookahead)
-            & (np.abs(lateral_m) >= turn_threshold)
-        )
-        if actionable.size == 0:
-            return "FORWARD"
-
-        first_idx = int(actionable[0])
-        first_delta = float(lateral_m[first_idx])
-        return self.guidance_side(first_delta)
+        return self.guidance_from_lookahead(rows_m, lateral_m)
 
     def classify_world_guidance(self) -> str:
         if (
@@ -1701,19 +1702,55 @@ class ZedTopdownAStar(Node):
         if forward_m.size == 0 or float(np.max(forward_m)) < stop_distance:
             return "STOP!"
 
-        lookahead = float(self.get_parameter("guidance_first_turn_lookahead_m").value)
-        turn_threshold = float(self.get_parameter("guidance_turn_lateral_threshold_m").value)
-        ignore_near = float(self.get_parameter("guidance_ignore_near_m").value)
-        actionable = np.flatnonzero(
-            (forward_m >= ignore_near)
-            & (forward_m <= lookahead)
-            & (np.abs(lateral_m) >= turn_threshold)
-        )
-        if actionable.size == 0:
-            return "FORWARD"
+        return self.guidance_from_lookahead(forward_m, lateral_m)
 
-        nearest_idx = int(actionable[np.argmin(forward_m[actionable])])
-        return self.guidance_side(float(lateral_m[nearest_idx]))
+    def guidance_from_lookahead(self, forward_m: np.ndarray, lateral_m: np.ndarray) -> str:
+        """Command toward the path position at a fixed distance ahead."""
+        if forward_m.size == 0 or lateral_m.size == 0:
+            return "STOP!"
+
+        ignore_near = max(0.0, float(self.get_parameter("guidance_ignore_near_m").value))
+        lookahead = max(ignore_near, float(self.get_parameter("guidance_lookahead_m").value))
+        threshold = max(0.0, float(self.get_parameter("guidance_turn_lateral_threshold_m").value))
+
+        order = np.argsort(forward_m)
+        forward_m = np.asarray(forward_m, dtype=np.float32)[order]
+        lateral_m = np.asarray(lateral_m, dtype=np.float32)[order]
+
+        valid = forward_m >= ignore_near
+        forward_m = forward_m[valid]
+        lateral_m = lateral_m[valid]
+        if forward_m.size == 0:
+            return "STOP!"
+
+        target_m = min(lookahead, float(forward_m[-1]))
+        if target_m < ignore_near:
+            return "STOP!"
+
+        # Collapse duplicate forward samples so interpolation gives one stable
+        # lateral target at the requested lookahead distance.
+        uniq_forward = []
+        uniq_lateral = []
+        last_f = None
+        for f, l in zip(forward_m, lateral_m):
+            f = float(f)
+            l = float(l)
+            if last_f is None or abs(f - last_f) > 1e-3:
+                uniq_forward.append(f)
+                uniq_lateral.append(l)
+                last_f = f
+            else:
+                uniq_lateral[-1] = 0.5 * (uniq_lateral[-1] + l)
+        if len(uniq_forward) == 1:
+            lateral_at_lookahead = float(uniq_lateral[0])
+        else:
+            lateral_at_lookahead = float(
+                np.interp(target_m, np.asarray(uniq_forward), np.asarray(uniq_lateral))
+            )
+
+        if abs(lateral_at_lookahead) < threshold:
+            return "FORWARD"
+        return self.guidance_side(lateral_at_lookahead)
 
     def guidance_side(self, lateral_delta_m: float) -> str:
         delta = lateral_delta_m
@@ -1725,6 +1762,7 @@ class ZedTopdownAStar(Node):
         return "RIGHT" if delta > 0.0 else "LEFT"
 
     def publish_guidance(self, text: str):
+        previous_guidance = self.last_guidance_text
         text = self.stabilize_guidance(text)
 
         msg = String()
@@ -1732,58 +1770,189 @@ class ZedTopdownAStar(Node):
         self.guidance_pub.publish(msg)
 
         audio_text = self.build_audio_cue(text)
-        if audio_text:
+        audio_published = False
+        audio_reason = self.pending_audio_reason
+        if audio_text and self.should_publish_audio(audio_text):
             audio_msg = String()
             audio_msg.data = audio_text
             self.audio_cue_pub.publish(audio_msg)
+            audio_published = True
 
         now = time.time()
         period = float(self.get_parameter("guidance_log_period_s").value)
-        if text != self.last_guidance_text or (period > 0.0 and now - self.last_guidance_log >= period):
-            if audio_text and audio_text != text:
-                self.get_logger().info(f"guidance: {text} audio: {audio_text}")
-            else:
-                self.get_logger().info(f"guidance: {text}")
-            self.last_guidance_text = text
+        guidance_changed = text != previous_guidance
+        if guidance_changed or (period > 0.0 and now - self.last_guidance_log >= period):
+            self.get_logger().info(f"guidance: {text}")
             self.last_guidance_log = now
+        if audio_published:
+            self.get_logger().info(
+                f"audio_cue='{audio_text}' immediate='{text}' reason='{audio_reason}'"
+            )
 
     def build_audio_cue(self, immediate_text: str) -> str:
-        """Return one guarded speech phrase for the audio node.
-
-        /navivest/guidance remains the simple immediate command. Audio adds one
-        upcoming turn cue by probing the fixed path every 0.10 m. This avoids
-        stacking many future commands and keeps the haptic/simple topic stable.
-        """
+        """Return a sparse, route-aware spoken cue for the audio node."""
+        self.pending_audio_reason = ""
         if immediate_text in ("STOP!", "STOP", "WAIT"):
-            return "Wait"
+            self.pending_audio_reason = "stop"
+            return "Stop"
+
+        if self.last_audio_was_stop and bool(self.get_parameter("audio_path_clear_enabled").value):
+            self.pending_audio_reason = "clear"
+            return "Path clear"
 
         upcoming = self.find_earliest_upcoming_turn(immediate_text)
         if upcoming is not None:
             direction, distance_m = upcoming
-            return f"{direction.title()} in {distance_m:.1f} meters"
+            now_distance = max(0.0, float(self.get_parameter("audio_now_distance_m").value))
+            round_m = max(0.01, float(self.get_parameter("audio_distance_round_m").value))
+            rounded = round(float(distance_m) / round_m) * round_m
+            if distance_m <= now_distance or rounded <= 0.0:
+                self.pending_audio_reason = "upcoming_turn"
+                return f"{direction.title()} now"
+            self.pending_audio_reason = "upcoming_turn"
+            return f"{direction.title()} in {rounded:.1f} meters"
+
+        if immediate_text in ("LEFT", "RIGHT"):
+            self.pending_audio_reason = "bear"
+            return f"Bear {immediate_text.lower()}"
 
         if immediate_text == "FORWARD":
+            self.pending_audio_reason = "forward"
             return "Forward"
-        if immediate_text in ("LEFT", "RIGHT"):
-            return immediate_text.title()
         return ""
+
+    def should_publish_audio(self, audio_text: str) -> bool:
+        text = audio_text.strip()
+        reason = self.pending_audio_reason or "unknown"
+        if not text:
+            self.log_audio_suppression(text, "empty")
+            return False
+
+        now = time.time()
+        elapsed = now - self.last_audio_publish_time
+        kind = self.audio_cue_kind(text)
+        last_kind = self.audio_cue_kind(self.last_audio_cue_text)
+
+        if not self.last_audio_cue_text:
+            self.accept_audio_cue(text, now, kind)
+            return True
+
+        if kind == "stop":
+            interval = float(self.get_parameter("audio_stop_repeat_interval_s").value)
+            if last_kind != "stop" or elapsed >= interval:
+                self.accept_audio_cue(text, now, kind)
+                return True
+            self.log_audio_suppression(text, "stop_interval")
+            return False
+
+        if kind == "clear" and self.last_audio_was_stop:
+            self.accept_audio_cue(text, now, kind)
+            return True
+
+        side = self.audio_cue_side(text)
+        last_side = self.audio_cue_side(self.last_audio_cue_text)
+        if (
+            side in ("LEFT", "RIGHT")
+            and last_side in ("LEFT", "RIGHT")
+            and side != last_side
+            and elapsed < 1.0
+        ):
+            self.log_audio_suppression(text, "contradictory")
+            return False
+
+        if text == self.last_audio_cue_text:
+            if kind == "forward":
+                interval = float(self.get_parameter("audio_forward_repeat_interval_s").value)
+            elif kind in ("turn", "bear"):
+                interval = float(self.get_parameter("audio_turn_repeat_interval_s").value)
+            else:
+                interval = float(self.get_parameter("audio_min_interval_s").value)
+            if elapsed < interval:
+                self.log_audio_suppression(text, "duplicate")
+                return False
+
+        min_interval = float(self.get_parameter("audio_min_interval_s").value)
+        if elapsed < min_interval:
+            self.log_audio_suppression(text, "interval")
+            return False
+
+        self.accept_audio_cue(text, now, kind)
+        self.pending_audio_reason = reason
+        return True
+
+    def accept_audio_cue(self, text: str, now: float, kind: str):
+        self.last_audio_cue_text = text
+        self.last_audio_publish_time = now
+        self.last_audio_was_stop = kind == "stop"
+
+    def audio_cue_kind(self, text: str) -> str:
+        upper = text.strip().upper()
+        if not upper:
+            return ""
+        if upper in ("STOP", "WAIT") or upper.startswith(("STOP", "WAIT")):
+            return "stop"
+        if upper == "PATH CLEAR":
+            return "clear"
+        if upper == "FORWARD":
+            return "forward"
+        if upper.startswith("BEAR "):
+            return "bear"
+        if upper.startswith(("LEFT", "RIGHT")):
+            return "turn"
+        return "other"
+
+    def audio_cue_side(self, text: str) -> str:
+        upper = text.strip().upper()
+        if upper.startswith("BEAR LEFT") or upper.startswith("LEFT"):
+            return "LEFT"
+        if upper.startswith("BEAR RIGHT") or upper.startswith("RIGHT"):
+            return "RIGHT"
+        return ""
+
+    def log_audio_suppression(self, text: str, reason: str):
+        if bool(self.get_parameter("audio_debug_suppression").value):
+            self.get_logger().info(
+                f"audio_suppressed cue='{text}' reason='{reason}' pending_reason='{self.pending_audio_reason}'"
+            )
 
     def find_earliest_upcoming_turn(self, immediate_text: str):
         if not self.active_path_world or self.current_floor_origin_odom is None:
-            return None
+            return self.find_earliest_upcoming_turn_from_cells(immediate_text)
 
         guide_forward = self.active_unit_forward_axis if self.active_unit_forward_axis is not None else self.current_forward_axis
         guide_right = self.active_unit_right_axis if self.active_unit_right_axis is not None else self.current_right_axis
         if guide_forward is None or guide_right is None:
-            return None
+            return self.find_earliest_upcoming_turn_from_cells(immediate_text)
 
         path = np.array(self.active_path_world, dtype=np.float32)
         if path.ndim != 2 or path.shape[0] < 2:
-            return None
+            return self.find_earliest_upcoming_turn_from_cells(immediate_text)
 
         rel = path - self.current_floor_origin_odom
         forward_m = rel @ guide_forward
         lateral_m = rel @ guide_right
+        return self.find_earliest_turn_from_series(forward_m, lateral_m, immediate_text)
+
+    def find_earliest_upcoming_turn_from_cells(self, immediate_text: str):
+        path_cells = self.latest_path_cells_for_audio or self.last_path_cells
+        if not path_cells or len(path_cells) < 2:
+            return None
+
+        resolution = float(self.get_parameter("resolution_m").value)
+        start_row, start_col = path_cells[0]
+        forward_m = np.asarray(
+            [(row - start_row) * resolution for row, _ in path_cells],
+            dtype=np.float32,
+        )
+        lateral_m = np.asarray(
+            [(col - start_col) * resolution for _, col in path_cells],
+            dtype=np.float32,
+        )
+        return self.find_earliest_turn_from_series(forward_m, lateral_m, immediate_text)
+
+    def find_earliest_turn_from_series(self, forward_m: np.ndarray, lateral_m: np.ndarray, immediate_text: str):
+        if forward_m.size < 2 or lateral_m.size < 2:
+            return None
 
         order = np.argsort(forward_m)
         forward_m = forward_m[order]

@@ -120,11 +120,13 @@ class GuidanceAudio(Node):
         text = phrase.strip().upper()
         if not text:
             return "STOP"
-        if text.startswith("LEFT"):
+        if text.startswith("LEFT") or text.startswith("BEAR LEFT"):
             return "LEFT"
-        if text.startswith("RIGHT"):
+        if text.startswith("RIGHT") or text.startswith("BEAR RIGHT"):
             return "RIGHT"
         if text == "FORWARD" or text.startswith("FORWARD"):
+            return "FORWARD"
+        if text == "PATH CLEAR":
             return "FORWARD"
         if text.startswith(("WAIT", "STOP", "BLOCKED")) or "NO SAFE PATH" in text:
             return "STOP"
@@ -143,6 +145,7 @@ class GuidanceAudio(Node):
             ) as sock:
                 sock.settimeout(HAPTICS_TIMEOUT_S)
                 sock.sendall(payload)
+            self.get_logger().info(f"Haptics cue: phrase='{phrase}' command='{command}'")
         except OSError as exc:
             now = time.time()
             if now - self.last_haptics_error_log >= HAPTICS_ERROR_LOG_PERIOD_S:
