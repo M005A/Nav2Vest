@@ -198,13 +198,10 @@ python3 -m py_compile \
 
 ## Future Work
 
-- Haptic vest integration
-- Audio guidance output
 - Semantic obstacle classification
 - SLAM-based long-term mapping
 - Outdoor navigation support
 - Multi-floor environment handling
-- Jetson deployment optimization
 
 ---
 
